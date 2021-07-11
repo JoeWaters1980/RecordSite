@@ -1,9 +1,7 @@
 .navigation{
     background-color: grey;
-    align-content: center;
-    align-items: center;
-    margin: auto;
-    padding: auto;
+    margin: 0.2rem;
+    padding: 0.2rem;
     color: greenyellow;
     text-align: center;
 }
