@@ -1,7 +1,6 @@
 .navigation{
-    flex-wrap: wrap;
-    float:left;
     box-sizing: border-box;
+    display: block;
     background-color: grey;
     margin: 0.2rem, auto;
     padding: 0.2rem;
