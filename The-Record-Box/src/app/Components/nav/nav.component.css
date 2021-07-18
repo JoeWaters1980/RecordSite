@@ -1,7 +1,9 @@
 .navigation{
+    flex-wrap: wrap;
+    float:left;
+    box-sizing: border-box;
     background-color: grey;
-    margin: 0.2rem;
+    margin: 0.2rem, auto;
     padding: 0.2rem;
-    color: greenyellow;
     text-align: center;
 }
