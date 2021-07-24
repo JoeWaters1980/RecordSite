@@ -1,8 +1,7 @@
 .navigation{
-    box-sizing: border-box;
-    display: block;
+    display: inline-flexbox;
     background-color: grey;
-    margin: 0.2rem, auto;
+    /* margin: auto; */
     padding: 0.2rem;
     text-align: center;
 }
