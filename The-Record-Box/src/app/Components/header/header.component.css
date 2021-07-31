@@ -1,9 +1,10 @@
-.title{
+.jumbotron{
     text-align:center;
-    font-size: 6rem;
+    font-size: 40px;
 }
 .LogoImg{
-    width: 100px;
-    height: 100px;
+    background-color: black;
+    width: 60px;
+    height: 60px;
     float: right; 
 }
