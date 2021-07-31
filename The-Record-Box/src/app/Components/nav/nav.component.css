@@ -1,7 +1,10 @@
 .navigation{
-    display: inline-flexbox;
+    display: flex;
+}
+.flex-container{
+    display: flex;
     background-color: grey;
-    /* margin: auto; */
-    padding: 0.2rem;
-    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
 }
