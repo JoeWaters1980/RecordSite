@@ -9,7 +9,9 @@ body{
 body *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: black;
+    color: yellowgreen;
     padding-top: 2em;
     height: 100%;
 }
+
 
