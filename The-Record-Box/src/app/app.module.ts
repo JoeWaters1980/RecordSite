@@ -10,7 +10,7 @@ import { AccessComponent } from './Components/access/access.component';
 import { LoginComponent } from './Components/login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import {vinylProducts} from '../data/vinylProducts';
-// import { CheckoutComponent } from './components/checkout/checkout.component';
+import { CheckoutComponent } from './Components/checkout/checkout.component';
 
 
 /* Adding the routes for navigation */
@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'Login', component: LoginComponent },
   { path: 'access', component: AccessComponent },
   { path: 'vinyl', component: VinylComponent },
+  { path: 'checkout', component: CheckoutComponent}
 
 ];
 
@@ -33,8 +34,7 @@ const routes: Routes = [
     VinylComponent,
     AccessComponent,
     LoginComponent,
-    // vinylProducts,
-    // CheckoutComponent
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,

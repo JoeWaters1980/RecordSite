@@ -10,6 +10,7 @@ export class NavComponent implements OnInit {
   vinyl='Vinyl';
   acce='Accessories';
   login='Login';
+  checkout='Cart';
 
   constructor() { }
 
