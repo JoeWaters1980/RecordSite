@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {accessoriesProducts} from '../../../data/accessories';
 
 @Component({
   selector: 'app-access',
@@ -6,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./access.component.css']
 })
 export class AccessComponent implements OnInit {
-  title='accessories';
+  title='Accessories';
+  public allAccessories=accessoriesProducts;
   constructor() { }
 
   ngOnInit(): void {

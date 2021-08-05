@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {vinylProducts} from '../../../data/vinylProducts';
 
 @Component({
   selector: 'app-vinyl',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VinylComponent implements OnInit {
  title='vinyl';
+
+ public allVinylProducts = vinylProducts;
   constructor() { }
 
   ngOnInit(): void {
+   
   }
 
 }
+
