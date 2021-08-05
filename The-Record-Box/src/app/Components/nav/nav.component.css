@@ -1,19 +1,23 @@
-/* .navigation{
-    display: flex;
+.navbar{
+    display: inline-flexbox;
+    padding: 1em;
+    margin: 1em;
+    justify-self: start;
 }
-.flex-container{
-    display: flex;
-    background-color: grey;
-    margin: 10px;
-    padding: 10px;
-    font-size: 30px;
-}
-.btn{
-    display: auto;
+
+.me-3{
+    display: inline-flexbox;
     color: greenyellow;
     font-size: 20px;
 }
-.LogoImg{
-    width: auto;
-    height:auto;
-} */
+.me-3:hover{
+    color: yellow;
+}
+.logo{
+    
+    padding: 2px;
+    margin: 1em;
+
+}
+
+
