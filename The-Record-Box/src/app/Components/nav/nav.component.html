@@ -1,16 +1,15 @@
-<nav class="navbar navbar-expand-md bg-dark">
-  <div id="navbarNavDropdown">
-<span>
-
+<nav>
+<span class="d-flex">
       <img class="logo" src="assets/images/TheRecordboxLarge.jpg"
-          alt="logo" width=72 height=57>
-      <button type="button" class="me-3 py-2" routerLink='/Home'>{{home}}</button>
-      <button type="button" class="me-3 py-2 " routerLink='/vinyl'>{{vinyl}}</button>
-      <button type="button" class="me-3 py-2 " routerLink='/access'>{{acce}}</button>
-      <button type="button" class="me-3 py-2 " routerLink='/Login'>{{login}}</button>
-      <button type="button" class="me-3 py-2 " routerLink='/checkout'>{{checkout}}</button>
-
+          alt="logo" width=72 height=57 img>
+      <div class="col">
+        <ul class = navButtons>
+     <li><a class="homeLink"  routerLink='/Home'>{{home}}</a></li>
+     <li><a class="vinyLink" routerLink='/vinyl'>{{vinyl}}</a></li>
+      <li><a class="acceLink " routerLink='/access'>{{acce}}</a></li>
+        <li><a class="loginLink" routerLink='/Login'>{{login}}</a></li>
+          <li><a class="checkoutLink" routerLink='/checkout'>{{checkout}}</a></li>
+    </ul>
+    </div>
     </span>
-
-  </div>
-</nav>
+    </nav>

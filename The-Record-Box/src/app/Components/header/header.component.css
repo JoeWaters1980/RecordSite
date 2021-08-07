@@ -1,6 +1,11 @@
 /* .jumbotron{
+     align-items: stretch; 
     display:flexbox;
-}
-.background{
-   background-position: center;
+    object-fit: contain;
 } */
+.container{
+    text-align: center;
+    margin: 0em; 
+    display:flexbox;
+ 
+}
