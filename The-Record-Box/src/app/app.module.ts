@@ -11,6 +11,9 @@ import { LoginComponent } from './Components/login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import {vinylProducts} from '../data/vinylProducts';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
+import {AngularFireModule} from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from '../environments/environment';
 
 
 /* Adding the routes for navigation */
@@ -38,7 +41,9 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes,{useHash: true})
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

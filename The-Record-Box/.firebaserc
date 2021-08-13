@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "the-record-box": {
+      "hosting": {
+        "The-Record-Box": [
+          "the-record-box"
+        ]
+      }
+    }
+  }
+}

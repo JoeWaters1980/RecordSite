@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {accessoriesProducts} from '../../../data/accessories';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-access',
@@ -8,8 +10,10 @@ import {accessoriesProducts} from '../../../data/accessories';
 })
 export class AccessComponent implements OnInit {
   title='Accessories';
-  public allAccessories=accessoriesProducts;
-  constructor() { }
+  items: Observable<any[]>;
+  // public allAccessories=accessoriesProducts;
+  constructor(public db:AngularFireDatabase){
+    this.items=db.list('items').valueChanges(); }
 
   ngOnInit(): void {
   }
