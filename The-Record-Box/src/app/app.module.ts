@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule,ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -13,7 +13,10 @@ import {vinylProducts} from '../data/vinylProducts';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
 import {AngularFireModule} from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
+import { ProductListComponent } from './Components/product-list/product-list.component';
 
 
 /* Adding the routes for navigation */
@@ -37,12 +40,15 @@ const routes: Routes = [
     VinylComponent,
     AccessComponent,
     LoginComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
+    HttpClientModule,
     AngularFireDatabaseModule,
+    AngularFirestoreModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

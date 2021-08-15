@@ -23,7 +23,7 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@primer/octicons": "^14.2.2",
     "angular": "^1.8.2",
-    "bootstrap": "^5.0.2",
+    "bootstrap": "^5.1.0",
     "firebase": "^8.9.1",
     "nodemon": "^2.0.12",
     "rxjs": "~6.6.0",
