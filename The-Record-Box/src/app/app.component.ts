@@ -29,7 +29,7 @@ itemValue='';
   // }
   productsData!: Products[];
 
-  constructor(private _productAPIService:ProductApiServiceService){}
+  constructor(){}
   // // public allAccessories=accessoriesProducts;
   // constructor(public db:AngularFireDatabase){
   //   this.items=db.list('items').valueChanges(); }

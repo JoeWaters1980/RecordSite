@@ -1,4 +1,7 @@
 {
+  "projects": {
+    "staging": "the-record-box"
+  },
   "targets": {
     "the-record-box": {
       "hosting": {
