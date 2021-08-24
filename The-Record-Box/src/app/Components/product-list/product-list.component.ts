@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Products } from 'src/interface/Products';
-import { ProductApiServiceService } from 'src/services/product-api-service.service';
-import { FirebaseService } from 'src/services/firebase.service';
-import { AngularFirestore } from '@angular/fire/firestore';
+
 
 @Component({
   selector: 'app-product-list',
@@ -14,17 +12,18 @@ export class ProductListComponent  {
   title='Products';
   products: any;
 
-constructor(private productService: FirebaseService){}
-ngOnInit(){
+constructor(){}
+  // private productService: FirebaseService){}
+ngOnInit(){}
 
-}
-  getAllProducts(){
-    this.productService.getProductList().subscribe((res =>{
-      this.products=res;
-    }))
+// }
+//   getAllProducts(){
+//     this.productService.getProductList().subscribe((res =>{
+//       this.products=res;
+//     }))
   }
 
-}
+
   // ngOnInit(){
   //   this._productAPIService.getProductsData().subscribe((productsData: any) =>
   //     {this.productsData = productsData});

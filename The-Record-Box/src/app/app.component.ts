@@ -1,9 +1,6 @@
 import { Component, Input } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import {HttpClient,HttpErrorResponse} from'@angular/common/http';
-import {AngularFirestoreCollection, AngularFirestore} from '@angular/fire/firestore';
-import { ProductApiServiceService } from 'src/services/product-api-service.service';
 import { Products} from 'src/interface/Products';
 
 @Component({

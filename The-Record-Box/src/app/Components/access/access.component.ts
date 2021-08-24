@@ -1,24 +1,29 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {accessoriesProducts} from '../../../data/accessories';
-import { AngularFireDatabase } from '@angular/fire/database';
 import { Observable } from 'rxjs';
 import {Products} from '../../../interface/Products';
-import { ProductApiServiceService } from 'src/services/product-api-service.service';
+import { ServicesService } from 'src/services/services.service';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-access',
   templateUrl: './access.component.html',
   styleUrls: ['./access.component.css'],
-  providers:[ProductApiServiceService]
 })
 export class AccessComponent implements OnInit {
  
   @Input()
-  productsData!: Products;
+  products: Products[]=[];
   title='Accessories';
- constructor() {}
- ngOnInit(){}
+ constructor(public http:HttpClient, private services:ServicesService) {}
+ ngOnInit(){
+   this.getProducts();
+ }
+ getProducts() {
+  this.services.getProducts().then(res => {
+    this.products = res.Items;
+  })
   
+}
 }
 
 

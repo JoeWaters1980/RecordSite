@@ -11,13 +11,9 @@ import { LoginComponent } from './Components/login/login.component';
 import { Routes, RouterModule } from '@angular/router';
 import {vinylProducts} from '../data/vinylProducts';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
-import {AngularFireModule} from '@angular/fire';
-import { AngularFireDatabaseModule } from '@angular/fire/database';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductListComponent } from './Components/product-list/product-list.component';
-import { FormStyle } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 
@@ -26,7 +22,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'Home', pathMatch: 'full' },
   { path: 'Home', component: HomeComponent },
   { path: 'Login', component: LoginComponent },
-  { path: 'access', component: ProductListComponent },
+  { path: 'access', component: AccessComponent },
   { path: 'vinyl', component: VinylComponent },
   { path: 'checkout', component: CheckoutComponent}
 
@@ -48,10 +44,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
     HttpClientModule,
-    AngularFireDatabaseModule,
-    AngularFirestoreModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

@@ -1,35 +1,31 @@
-<!--<div class="album py-5 bg-dark">
+<div class="album py-5 bg-dark">
   <div class="container">
     <h3>{{title}}</h3>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3"*ngFor="let item of items | async">
-      <div class="col">
-        <div  class="card shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div *ngFor='let p of products'class="col">
+        <div class="card shadow-sm">
+          <img src="The-Record-Box\src\assets\images\TheRecordboxLogo.jpg" alt="image comming soon">
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="225" 
             role="img" aria-label="Placeholder: " preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>{{item.name}}</title>
-            <rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef"
-              dy=".3em">{{item.discription}}</text>
+            <rect width="100%" height="100%" fill="#55595c">
+             </rect><text x="50%" y="50%" fill="#eceeef"
+              dy=".3em">{{p.name}}</text>
           </svg>
-
+          <div>
+           
+          </div>
           <div class="card-body">
-            <p class="card-text"></p>
+            <p class="card-text">{{p.description}}</p>
             <div class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn btn-outline-secondary">add to cart</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">add to cart</button>
 
               </div>
-              <small class="text-muted">{{item.price}}</small>
+              <small class="text-muted">{{p.price}}</small>
             </div>
           </div>
         </div>
       </div>
-    </div>
+   </div>
   </div>
-</div>!-->
-<div class=' container'>
-<h1>{{title}}</h1>
-<div class='col-3'>placeholder</div>
-<!--<li *ngFor ='let items of items|async'>{{items.name}}</li>!--> 
-<li></li>
 </div>
-
