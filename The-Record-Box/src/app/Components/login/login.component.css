@@ -1,0 +1,17 @@
+.container-fluid-md{
+   margin-left: 15%;
+   margin-right:15%;
+   margin-top: 2.5%;
+   padding: 2em;
+}
+.button{
+   margin-left: 30%;
+}
+.form-floating{
+   margin-left:  6%;
+   margin-right:  6%;
+   padding: 5px;
+}
+.form-check{
+   margin-left: 6%;
+}

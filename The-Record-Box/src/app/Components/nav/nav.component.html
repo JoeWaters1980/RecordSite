@@ -1,15 +1,27 @@
-<nav>
-<span class="d-flex">
-      <img class="logo" src="assets/images/TheRecordboxLarge.jpg"
-          alt="logo" width=72 height=57 img>
+<div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">
+    <img src="assets/images/TheRecordboxLarge.jpg"alt="logo" width=72 height=57 class="rounded">
+  </a>
       <div class="col">
-        <ul class = navButtons>
-     <li><a class="homeLink"  routerLink='/Home'>{{home}}</a></li>
-     <li><a class="vinyLink" routerLink='/vinyl'>{{vinyl}}</a></li>
-      <li><a class="acceLink " routerLink='/access'>{{acce}}</a></li>
-        <li><a class="loginLink" routerLink='/Login'>{{login}}</a></li>
-          <li><a class="checkoutLink" routerLink='/checkout'>{{checkout}}</a></li>
-    </ul>
+        <div class="btn-group btn-group-lg" role="group" aria-label="Basic radio toggle button group">
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+          <label class="btn btn-outline-success" routerLink='/Home' for="btnradio1">{{home}}</label>
+        
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+          <label class="btn btn-outline-success" routerLink='/access' for="btnradio2">Shop</label>
+        
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+          <label class="btn btn-outline-success"  routerLink='/Login' for="btnradio3">{{login}}</label>
+        
+          <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
+          <label class="btn btn-outline-success" routerLink='/checkout' for="btnradio4">{{checkout}}</label>
+         
+        </div>
     </div>
-    </span>
-    </nav>
+</nav>
+</div>
+
+    
+
+      

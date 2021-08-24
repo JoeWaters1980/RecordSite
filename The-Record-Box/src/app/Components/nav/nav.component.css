@@ -1,18 +1,10 @@
-.navbar{
+/* .navbar{
     padding: 0em;
     margin: 0em;
     outline:solid silver;
     text-decoration: none;
-    
-    
-    /* justify-items: center;   */
 }
-.me-3{
-    display: inline-flexbox;
-    text-decoration: none;
-    /* outline: silver; */
-    /* background-color: black; */
-}
+
 
 a:hover{
     text-decoration: none;
@@ -29,12 +21,10 @@ a:hover{
 a{
     text-decoration: none;
     color: yellowgreen;
-}
+} 
 
-.navButtons{
-    /* background-color: black; */
-    /* border-color:goldenrod; */
-    /* border-style:inset; */
+ .navButtons{
+
     text-decoration: none;
     color: whitesmoke;
     padding: 1.3em;
@@ -42,24 +32,18 @@ a{
     display: inline-flex;
     list-style:none;
     justify-content: space-around;
-    /* --navOnload-time: 4400ms; */
+
     animation: navOnLoad 400ms ease-in 250ms;
-}
+} 
 li{
 
     text-decoration: none;
     background-color:#8c9338;
     padding: 15px;
     margin: 1%;
-    /* animation: navLinkLoad 500ms ease-in; */
+
 }
-.col {
-  
-    /* background-color:#9899a0; */
-    /* animation: navOnLoad 400ms ease-in 250ms; */
-    /* var(navOnload-time) */
-    text-decoration: none;
-}
+ 
 
 @keyframes navOnLoad{
     0%
@@ -90,4 +74,27 @@ li{
         transform: translateX(0%);
 
     }
+
+
+}  */
+.navbar-brand{
+    padding: 5px;
+        
+}
+.btn-group{
+    padding: 5px;
+
+}
+.col {
+
+
+    text-decoration: none;
+}
+.me-3{
+    display: inline-flexbox;
+    text-decoration: none;
+
+}
+.btnradio{
+    padding: 4px;
 }

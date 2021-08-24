@@ -1,18 +1,14 @@
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: black;
-    color: yellowgreen;
-    /* padding-top: 2em; */
-    /* height: 50%; */
     margin: 0;
+    background-color:#9a9e9c;
 } 
  
 body *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* background-color: black; */
-    color: yellowgreen;
     height: 100%;
     margin: 0;
+   
 }
 
 

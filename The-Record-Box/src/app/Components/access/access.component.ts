@@ -13,7 +13,7 @@ export class AccessComponent implements OnInit {
  
   @Input()
   products: Products[]=[];
-  title='Accessories';
+  title='Shop';
  constructor(public http:HttpClient, private services:ServicesService) {}
  ngOnInit(){
    this.getProducts();
