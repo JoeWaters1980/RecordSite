@@ -15,6 +15,8 @@ import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductListComponent } from './Components/product-list/product-list.component';
 import { FormsModule } from '@angular/forms';
+import { SignUpComponent } from './sign-up/sign-up.component';
+import { AccountComponent } from './Components/account/account.component';
 
 
 /* Adding the routes for navigation */
@@ -23,8 +25,9 @@ const routes: Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'Login', component: LoginComponent },
   { path: 'access', component: AccessComponent },
-  { path: 'vinyl', component: VinylComponent },
-  { path: 'checkout', component: CheckoutComponent}
+  { path: 'signUp', component: SignUpComponent },
+  { path: 'checkout', component: CheckoutComponent},
+  { path: 'account', component: AccountComponent}
 
 ];
 
@@ -39,7 +42,9 @@ const routes: Routes = [
     AccessComponent,
     LoginComponent,
     CheckoutComponent,
-    ProductListComponent
+    ProductListComponent,
+    SignUpComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
