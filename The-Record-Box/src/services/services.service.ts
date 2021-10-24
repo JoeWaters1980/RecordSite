@@ -11,6 +11,14 @@ export class ServicesService {
 
   constructor(private httpClient:HttpClient) { }
   getProducts(){
-    return this.httpClient.get<ProductsResponse>(this.productURL).toPromise()
+    return this.httpClient.get<ProductsResponse>(this.productURL).toPromise();
   }
+
+  addToCart(){}
+
+  getItemsInCart(){}
+
+  QtyCartIncrease(){}
+
+  clearCart(){}
 }
