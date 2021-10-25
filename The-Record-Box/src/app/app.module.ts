@@ -15,6 +15,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { AccountComponent } from './Components/account/account.component';
+import { FilterComponent } from './Components/access/filter/filter.component';
+import { CartComponent } from './Components/access/cart/cart.component';
+import { ProductsComponent } from './Components/access/products/products.component';
 
 
 /* Adding the routes for navigation */
@@ -40,7 +43,10 @@ const routes: Routes = [
     LoginComponent,
     CheckoutComponent,
     SignUpComponent,
-    AccountComponent
+    AccountComponent,
+    FilterComponent,
+    CartComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
