@@ -10,21 +10,15 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./access.component.css'],
 })
 export class AccessComponent implements OnInit {
- 
-  @Input()
-  products: Products[]=[];
-  title='Shop';
- constructor(public http:HttpClient, private services:ServicesService) {}
- ngOnInit(){
-   this.getProducts();
- }
- getProducts() {
-  this.services.getProducts().then(res => {
-    this.products = res.Items;
-  })
+
+    title = "Shop";
+    constructor() { }
+  
+    ngOnInit(): void {
+    }
   
 }
-}
+
 
 
 
