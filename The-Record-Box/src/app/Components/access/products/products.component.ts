@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Products } from '../../../../interface/Products';
 import { ServicesService } from 'src/services/services.service';
 import { HttpClient } from '@angular/common/http';
+import { MessengerService } from 'src/services/messenger.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -21,4 +22,5 @@ export class ProductsComponent implements OnInit {
       this.products = res.Items;
     });
   }
+  
 }
