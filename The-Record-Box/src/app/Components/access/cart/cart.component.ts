@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent implements OnInit {
-
+   @Input()
+   cartItems: any
+  cartTotal=0
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    // this.cartTotal.forEach(item => {
+    //   this.cartTotal +=(item.qty * item.price)
+    // });
   }
 
 }
