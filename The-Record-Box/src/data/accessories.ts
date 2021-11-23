@@ -1,4 +1,4 @@
-export const accessoriesProducts=[
+export const Products=[
 {id:11, name:"Pro-Ject E Turntable", category:"Accessories",description:"Pro-Ject E Turntable",price:190.99},
 {id:12, name:"Ortofon Pro S stylus", category:"Accessories",description:"Ortofon Pro S stylus",price:34.99},
 {id:13, name:"Wharfdale Diamond 9.1", category:"Accessories",description:"Wharfdale Diamond 9.1",price:119.99},

@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Products } from 'src/interface/Products';
+import { cartItems } from 'src/interface/cart';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +12,9 @@ export class MessengerService {
 
   constructor() { }
 
-  sendMessage(){
+  sendMessage(Item){
     //for triggering an event which accepts a product.
-    this.subject.next()
+    this.subject.next(cartItems)
   }
 
   getMessage(){

@@ -1,14 +1,14 @@
-export interface Product {
+export interface cartItems {
     productId: string;
     name: string;
     category: string;
     description: string;
     price: number;
+    qty:number
 }
 
-export interface ProductsResponse {
+export interface CartResponse {
     Count: number;
     ScannedCount: number;
-    Items: Product[];
+    Items: CartResponse[];
 }
-

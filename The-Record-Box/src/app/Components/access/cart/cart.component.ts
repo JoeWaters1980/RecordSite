@@ -1,4 +1,8 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
+import { cartItems } from 'src/interface/cart';
+import { ServicesService } from 'src/services/services.service';
+
 
 @Component({
   selector: 'app-cart',
@@ -7,14 +11,21 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CartComponent implements OnInit {
    @Input()
-   cartItems: any
+   cartItem: any
   cartTotal=0
-  constructor() { }
-
+  constructor(public http: HttpClient, private services: ServicesService) {}
   ngOnInit() {
-    // this.cartTotal.forEach(item => {
-    //   this.cartTotal +=(item.qty * item.price)
-    // });
+    this.getItemsInCart();
+    this.cartTotal();
+  }
+  getItemsInCart() {
+    this.services.getItemsInCart().then((res) => {
+      this.cartItem = res.Items;
+    });
+  }
+  getCartTotal(){
+    this.cartItem.forEach(items => {
+      this.cartTotal +=(items.qty* items.price)
   }
 
 }
