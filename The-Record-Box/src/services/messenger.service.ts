@@ -8,16 +8,16 @@ import { environment } from 'src/environments/environment';
 })
 export class MessengerService {
 
-  subject = new Subject()
+  // subject = new Subject()
 
-  constructor() { }
+  // constructor() { }
 
-  sendMessage(Item){
-    //for triggering an event which accepts a product.
-    this.subject.next(cartItems)
-  }
+  // sendMessage(Item){
+  //   //for triggering an event which accepts a product.
+  //   this.subject.next(cartItems)
+  // }
 
-  getMessage(){
-    return this.subject.asObservable()
-  }
+  // getMessage(){
+  //   return this.subject.asObservable()
+  // }
 }

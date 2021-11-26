@@ -16,7 +16,7 @@ export class CartComponent implements OnInit {
   constructor(public http: HttpClient, private services: ServicesService) {}
   ngOnInit() {
     this.getItemsInCart();
-    this.cartTotal();
+    // this.cartTotal();
   }
   getItemsInCart() {
     this.services.getItemsInCart().then((res) => {
@@ -24,8 +24,8 @@ export class CartComponent implements OnInit {
     });
   }
   getCartTotal(){
-    this.cartItem.forEach(items => {
-      this.cartTotal +=(items.qty* items.price)
+    // this.cartItem.forEach(items => {
+      // this.cartTotal +=(items.qty* items.price)
   }
 
 }
