@@ -15,17 +15,17 @@ export class CartComponent implements OnInit {
   cartTotal=0
   constructor(public http: HttpClient, private services: ServicesService) {}
   ngOnInit() {
-    this.getItemsInCart();
+    // this.getItemsInCart();
     // this.cartTotal();
   }
-  getItemsInCart() {
-    this.services.getItemsInCart().then((res) => {
-      this.cartItem = res.Items;
-    });
-  }
-  getCartTotal(){
-    // this.cartItem.forEach(items => {
-      // this.cartTotal +=(items.qty* items.price)
-  }
+  // getItemsInCart() {
+  //   // this.services.getItemsInCart().then((res) => {
+  //   //   this.cartItem = res.Items;
+  //   });
+  // }
+  // getCartTotal(){
+  //   // this.cartItem.forEach(items => {
+  //     // this.cartTotal +=(items.qty* items.price)
+  // }
 
 }

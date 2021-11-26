@@ -15,9 +15,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { AccountComponent } from './Components/account/account.component';
-import { FilterComponent } from './Components/access/filter/filter.component';
-import { CartComponent } from './Components/access/cart/cart.component';
-import { ProductsComponent } from './Components/access/products/products.component';
+import { CartComponent } from './Components/shop/cart/cart.component';
+import { ProductsComponent } from './Components/shop/products/products.component';
+import { ShopComponent } from './Components/shop/shop.component';
+import { FiltersComponent } from './Components/shop/filters/filters.component';
+import { CartItemsComponent } from './Components/shop/cart/cart-items/cart-items.component';
+import { ProductItemComponent } from './Components/shop/products/product-item/product-item.component';
 
 
 /* Adding the routes for navigation */
@@ -44,9 +47,12 @@ const routes: Routes = [
     CheckoutComponent,
     SignUpComponent,
     AccountComponent,
-    FilterComponent,
     CartComponent,
-    ProductsComponent
+    ProductsComponent,
+    ShopComponent,
+    FiltersComponent,
+    CartItemsComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
