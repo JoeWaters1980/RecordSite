@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ProductsResponse } from 'src/model/products';
+// import { ProductsResponse } from 'src/model/products';
 import { environment } from 'src/environments/environment';
 import { cartItems } from 'src/interface/cart';
 import { CartResponse } from 'src/model/cart';
@@ -13,9 +13,9 @@ export class ServicesService {
   cartURL = environment.dynamoURL;
 
   constructor(private httpClient:HttpClient) { }
-  getProducts(){
-    return this.httpClient.get<ProductsResponse>(this.productURL).toPromise();
-  }
+  // getProducts(){
+  //   return this.httpClient.get<ProductsResponse>(this.productURL).toPromise();
+  // }
 
   addToCart(){}
 
