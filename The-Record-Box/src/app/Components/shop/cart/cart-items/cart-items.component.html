@@ -1,17 +1,31 @@
-<div class="card cart">
-    <div class="card-body">
-    <h4 class="d-flex justify-content-between align-items-center mb-3">
-      <span class="text-muted">Your cart</span>
-    </h4>
-    <ul *ngIf="" class="list-group mb-3">
-      <li class="list-group-item active d-flex justify-content-between lh-condensed" *ngFor="">
-        <div>
-          <h6 class="my-0">test</h6>
-          <small class="text-muted">test 1</small>
-        </div>
-        <span class="text-muted">test 2</span>
+<!-- 
+<ul *ngIf="cartItems.length> 0" class = "list-group">
+  <h4 class="d-flex justify-content-between align-items-center mb-3">
+    <span class="text-muted">Your cart</span>
+  </h4>  -->
+<!--  <div class="card-body">
+    <p class="card-text">
+    </p>
+    <ul  class="list-group mb-3">
+      <li
+        class="
+          list-group-item
+          active
+          d-flex
+          justify-content-between
+          lh-condensed
+        ">
       </li>
     </ul>
-</div>
-</div>
+    </div> -->
 
+    <div class="cart-items">
+      <span>product {{cartItem.name}}</span>
+      <span> qty {{cartItem.qty}}</span>
+      <span> price {{cartItem.price * cartItem.qty |currency:'€ '}}</span>
+    </div>
+    <div>
+
+
+ 
+    </div>
