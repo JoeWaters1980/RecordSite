@@ -31,7 +31,9 @@ const routes: Routes = [
   { path: 'access', component: AccessComponent },
   { path: 'signUp', component: SignUpComponent },
   { path: 'checkout', component: CheckoutComponent},
-  { path: 'account', component: AccountComponent}
+  { path: 'account', component: AccountComponent},
+  { path: 'shop', component: ShopComponent}
+
 
 ];
 

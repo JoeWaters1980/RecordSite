@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import { Product } from 'src/model/products';
+import { MessengerService } from 'src/services/messenger.service';
 
 @Component({
   selector: 'app-product-item',
@@ -8,11 +9,15 @@ import { Product } from 'src/model/products';
 })
 export class ProductItemComponent implements OnInit {
 
- @Input()productItem!: Product;
+ @Input()
+  productItem!: Product;
 
-  constructor() { }
+  constructor(private msg: MessengerService) { }
 
   ngOnInit(): void {
   }
 
+  AddToCartHandle(){
+    this.msg.sendMessage()
+  }
 }

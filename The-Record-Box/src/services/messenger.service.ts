@@ -1,23 +1,22 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { cartItems } from 'src/interface/cart';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessengerService {
 
-  // subject = new Subject()
+  subject = new Subject()
 
-  // constructor() { }
+  constructor() { }
 
-  // sendMessage(Item){
-  //   //for triggering an event which accepts a product.
-  //   this.subject.next(cartItems)
-  // }
+  sendMessage(){
+    // console.log(product)
+    //for triggering an event which accepts a product.
+    this.subject.next()
+  }
 
-  // getMessage(){
-  //   return this.subject.asObservable()
-  // }
+  getMessage(){
+    return this.subject.asObservable()
+  }
 }

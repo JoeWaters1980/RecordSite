@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 // import { ProductsResponse } from 'src/model/products';
 import { environment } from 'src/environments/environment';
 import { cartItems } from 'src/interface/cart';
-import { CartResponse } from 'src/model/cart';
+// import { CartResponse } from 'src/model/cart';
 
 @Injectable({
   providedIn: 'root'
@@ -19,11 +19,11 @@ export class ServicesService {
 
   addToCart(){}
 
-  getItemsInCart(){
-    return this.httpClient.get<CartResponse>(this.cartURL).toPromise();
-  }
+  // getItemsInCart(){
+  //   return this.httpClient.get<CartResponse>(this.cartURL).toPromise();
+  // }
 
-  QtyCartIncrease(){}
+  // QtyCartIncrease(){}
 
-  clearCart(){}
+  // clearCart(){}
 }
