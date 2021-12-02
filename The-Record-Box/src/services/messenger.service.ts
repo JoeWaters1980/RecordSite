@@ -10,10 +10,10 @@ export class MessengerService {
 
   constructor() { }
 
-  sendMessage(){
-    // console.log(product)
-    //for triggering an event which accepts a product.
-    this.subject.next()
+  sendMessage(products: any){
+  //   // console.log(product)
+  //   //for triggering an event which accepts a product.
+    this.subject.next(products)
   }
 
   getMessage(){

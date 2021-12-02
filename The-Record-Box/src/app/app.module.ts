@@ -12,7 +12,7 @@ import {vinylProducts} from '../data/vinylProducts';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { environment } from '../environments/environment';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { AccountComponent } from './Components/account/account.component';
 import { CartComponent } from './Components/shop/cart/cart.component';
@@ -25,10 +25,10 @@ import { ProductItemComponent } from './Components/shop/products/product-item/pr
 
 /* Adding the routes for navigation */
 const routes: Routes = [
-  { path: '', redirectTo: 'Home', pathMatch: 'full' },
+  { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: HomeComponent },
   { path: 'Login', component: LoginComponent },
-  { path: 'access', component: AccessComponent },
+  // { path: 'access', component: AccessComponent },
   { path: 'signUp', component: SignUpComponent },
   { path: 'checkout', component: CheckoutComponent},
   { path: 'account', component: AccountComponent},
@@ -60,6 +60,7 @@ const routes: Routes = [
     BrowserModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],

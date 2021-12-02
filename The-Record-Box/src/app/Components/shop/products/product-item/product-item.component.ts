@@ -14,10 +14,10 @@ export class ProductItemComponent implements OnInit {
 
   constructor(private msg: MessengerService) { }
 
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
   AddToCartHandle(){
-    this.msg.sendMessage()
+    
   }
 }
