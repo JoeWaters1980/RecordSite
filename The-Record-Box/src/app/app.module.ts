@@ -25,7 +25,7 @@ import { ProductItemComponent } from './Components/shop/products/product-item/pr
 
 /* Adding the routes for navigation */
 const routes: Routes = [
-  { path: '', redirectTo: '/shop', pathMatch: 'full' },
+  { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: HomeComponent },
   { path: 'Login', component: LoginComponent },
   // { path: 'access', component: AccessComponent },

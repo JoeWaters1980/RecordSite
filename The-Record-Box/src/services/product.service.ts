@@ -2,7 +2,8 @@ import { Injectable } from '@angular/core';
 import { Product } from 'src/model/products';
 import { HttpClient } from '@angular/common/http';
 import {dynamoURL} from 'src/app/Api/api';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
+import{map,catchError}from 'rxjs/operators';
 import { Products } from 'src/interface/Products';
 
 @Injectable({
@@ -22,13 +23,21 @@ export class ProductService {
 
   constructor(private httpClient:HttpClient) { }
 
-  getProducts():Observable<Products[]>{
-    return this.httpClient.get<Products[]>(dynamoURL);
+  // getProducts():Observable<Products[]>{
+  //   return this.httpClient.get<Products[]>(dynamoURL);
+  // }
+  getProducts(){
+    return this.httpClient.get<Products>(dynamoURL).pipe(
+      map((data:Products)=>{
+      return data;
+    }), catchError( error => {
+      return throwError('something went wrong');
+    })
+    )
   }
-  
   // getProducts(): Product[]{
   //   // implement API for this method so we can return an observable.
-  
+
   //   return this.products
   // }
 

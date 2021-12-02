@@ -18,6 +18,8 @@ export class CartComponent implements OnInit {
     // this.getItemsInCart();
     // this.cartTotal();
   }
+
+  
   // getItemsInCart() {
   //   // this.services.getItemsInCart().then((res) => {
   //   //   this.cartItem = res.Items;
