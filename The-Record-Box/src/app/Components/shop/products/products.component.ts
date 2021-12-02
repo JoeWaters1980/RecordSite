@@ -17,12 +17,13 @@ listProducts:Product[] = []
   ngOnInit() {
 
     this.loadProducts();
-    // console.log(this.productService.getProducts())
+    // console.log(this.productService.getProducts().subscribe)
     
     }
     loadProducts(){
-      this.productService.getProducts().subscribe((products)=>{
+      this.productService.getProducts().subscribe((products: any)=>{
         this.listProducts = products;
+        console.log(this.listProducts);
     })
   }
 

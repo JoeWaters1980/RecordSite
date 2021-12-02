@@ -28,6 +28,7 @@ export class ProductService {
   
   // getProducts(): Product[]{
   //   // implement API for this method so we can return an observable.
+  
   //   return this.products
   // }
 
