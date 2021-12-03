@@ -1,3 +1,23 @@
 .container{
     padding: 2em;
 }
+.card-Home{
+    margin: 0%;
+    padding: 5%;
+    background-color: whitesmoke;
+}
+.card-body{
+    /* margin: 2%;
+    padding: 1%; */
+    background-color: #152349;
+    border-color: black;
+
+}
+.card-text{
+    color: #85055b;
+}
+
+.title{
+    font-size:xx-large;
+    align-content: center;
+}

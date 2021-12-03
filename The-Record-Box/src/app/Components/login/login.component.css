@@ -1,4 +1,4 @@
-.container-fluid-md{
+/* .container-fluid-md{
    margin-left: 15%;
    margin-right:15%;
    margin-top: 2.5%;
@@ -12,4 +12,18 @@
 }
 .form-check{
    margin-left: 6%;
+} */
+.card-Login{
+   justify-content: center;
+   align-items: center;
+   margin: 1%;
+   padding: 3%;
+   max-width: 80%;
+   background-color: darkgray;
+}
+.form-floating{
+   margin: 8px;
+}
+.form-check{
+   margin: 1%;
 }
