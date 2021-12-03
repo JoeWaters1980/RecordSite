@@ -22,6 +22,7 @@
     "@fortawesome/fontawesome-free": "^5.15.3",
     "@primer/octicons": "^14.2.2",
     "angular": "^1.8.2",
+    "angularx-social-login": "^4.0.1",
     "bootstrap": "^5.1.0",
     "nodemon": "^2.0.12",
     "rxjs": "~6.6.0",
