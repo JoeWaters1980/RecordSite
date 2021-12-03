@@ -1,0 +1,25 @@
+.card{
+    background-color: #152246;
+    color: silver;
+    /* align-items: center; */
+}
+.card,h6{
+    text-align:  center;
+    color: silver;
+}
+.card-body,p{
+    color: silver;
+    /* align-items: center; */
+}
+.card-text{
+    /* align-content: center; */
+    color: silver;
+}
+.btn{
+    background-color: black;
+    color:silver;
+    outline-color: #152246;
+}
+.text{
+    color: silver;
+}
