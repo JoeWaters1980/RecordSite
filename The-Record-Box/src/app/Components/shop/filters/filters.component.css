@@ -1,0 +1,13 @@
+.card,li{
+    background-color: silver;
+    border-color: #264BB1;
+    color: #264BB1;
+
+}
+.text,label{
+    color: #264BB1;
+}
+button{
+    color: white;
+
+}

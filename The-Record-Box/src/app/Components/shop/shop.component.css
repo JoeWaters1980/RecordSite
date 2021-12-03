@@ -1,10 +1,15 @@
 .container{
- background-color: silver;
- color: whitesmoke;
+ background-color: #85055b;
+ padding: 1%;
 }
 h2{
-    color: #85055b;
+    color:silver;
 }
 .card-Shop{
-    background-color: silver;
+
+   
+}
+.row{
+ background-color: #85055b;
+ padding: 2%;
 }

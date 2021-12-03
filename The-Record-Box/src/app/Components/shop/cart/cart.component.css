@@ -1,0 +1,34 @@
+.card-body,li{
+    background-color: silver;
+    border-color: #264BB1;
+    color: #264BB1;
+
+}
+.text,label{
+    color: #264BB1;
+}
+.btn{
+    color: white;
+    background-color: #264BB1;
+
+}
+.alert-info {
+    background-color: silver;
+    border-color: #264BB1;
+    color: #264BB1;
+}
+.cart-items:active,span{
+    color: white;
+}
+.list-group-item,li,ul{
+    background-color: silver;
+    color: #264BB1;
+}
+.container{
+    background-color: silver;
+    padding:2%;
+
+}
+.text{
+    color: #264BB1;
+}
