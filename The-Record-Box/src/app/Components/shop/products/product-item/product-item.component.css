@@ -8,11 +8,9 @@
     color: silver;
 }
 .card-body,p{
-    color: silver;
-    /* align-items: center; */
-}
+    color: silver;}
+    
 .card-text{
-    /* align-content: center; */
     color: silver;
 }
 .btn{
