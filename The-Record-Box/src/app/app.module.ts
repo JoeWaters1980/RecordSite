@@ -21,6 +21,12 @@ import { ShopComponent } from './Components/shop/shop.component';
 import { FiltersComponent } from './Components/shop/filters/filters.component';
 import { CartItemsComponent } from './Components/shop/cart/cart-items/cart-items.component';
 import { ProductItemComponent } from './Components/shop/products/product-item/product-item.component';
+import {
+  SocialAuthService,
+  SocialAuthServiceConfig,
+  SocialLoginModule,
+} from 'angularx-social-login';
+import { GoogleLoginProvider } from 'angularx-social-login';
 
 /* Adding the routes for navigation */
 const routes: Routes = [
@@ -58,9 +64,23 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    SocialLoginModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider('clientId'),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
