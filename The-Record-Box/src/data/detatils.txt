@@ -12,9 +12,9 @@ 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
 
 colors{
 
-    #312f2f  main
-    #06db30 secondary
-    #b0228c thrid
-    #8499b1
+    #0a0a0a  main
+    #03771a secondary
+    #f0c92e thrid
+    #d30521
 
 }
