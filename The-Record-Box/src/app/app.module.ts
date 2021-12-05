@@ -34,7 +34,7 @@ const routes: Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'Login', component: LoginComponent },
   // { path: 'access', component: AccessComponent },
-  { path: 'signUp', component: SignUpComponent },
+  // { path: 'signUp', component: SignUpComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'account', component: AccountComponent },
   { path: 'shop', component: ShopComponent },
@@ -75,7 +75,7 @@ const routes: Routes = [
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('clientId'),
+            provider: new GoogleLoginProvider('https://the-record-box.auth.eu-west-1.amazoncognito.com/login?client_id=7u7om8dajnpknpujta0phif86&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:4200'),
           },
         ],
       } as SocialAuthServiceConfig,

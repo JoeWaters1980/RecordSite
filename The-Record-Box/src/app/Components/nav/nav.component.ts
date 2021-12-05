@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
   home='Home';
-  signUp='sign Up';
   shop='Shop';
   login='Login';
   checkout='Cart';

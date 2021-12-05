@@ -14,5 +14,5 @@ export class CartItemsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  removeFromCart(){}
 }

@@ -1,29 +1,24 @@
-/* .container-fluid-md{
-   margin-left: 15%;
-   margin-right:15%;
-   margin-top: 2.5%;
-   padding: 2em;
-}
-
-.form-floating{
-   margin-left:  6%;
-   margin-right:  6%;
-   padding: 5px;
-}
-.form-check{
-   margin-left: 6%;
-} */
 .card-Login{
    justify-content: center;
    align-items: center;
    margin: 1%;
    padding: 3%;
    max-width: 80%;
-   background-color: darkgray;
+   background-color: #03771a;
+}
+.card-body, .card{
+   background-color: #f0c92e;
 }
 .form-floating{
    margin: 8px;
 }
 .form-check{
    margin: 1%;
+}
+.card-text,.form-check-label{
+   color: #d30521;
+
+}
+h2{
+   color: #f0c92e;
 }

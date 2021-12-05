@@ -3,6 +3,8 @@
       <span><p>{{cartItem.name}}</span>
       <span>{{cartItem.qty}}</span>
       <span>price {{ cartItem.price | currency:' € '}}</span>
+      <button type="button" class="btn btn sm" (click)="removeFromCart()">Remove</button>
+      
     </div>
     <div>
     </div>

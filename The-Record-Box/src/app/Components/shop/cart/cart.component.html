@@ -1,4 +1,4 @@
-<div class="container">
+
 <div *ngIf="cartItems.length === 0" class="alert alert-info">Your Cart Is Empty</div>
 <ul *ngIf="cartItems.length> 0" class = "list-group">
   <h4 class="card-body d-flex justify-content-between align-items-center mb-3">
@@ -13,5 +13,7 @@
       Total {{cartTotal |currency: '€ '}}
     </li>
       <button input name="" id="" class="btn btn" type="button" (click)="goToCheckOut()">Checkout</button>
+      <br>
+      <button input name="" id="" class="btn btn" type="button" (click)="clearCartItems()">Clear Cart</button>
 </ul>
-</div>
+

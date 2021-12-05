@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GoogleLoginProvider } from 'angularx-social-login';
-import { SocialAuthService } from 'angularx-social-login';
+import { GoogleLoginProvider,SocialAuthService, SocialUser } from 'angularx-social-login';
+
 
 @Component({
   selector: 'app-login',
@@ -8,14 +8,17 @@ import { SocialAuthService } from 'angularx-social-login';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
   title='Login';
+  // socialUser:SocialUser;
   constructor(private authService:SocialAuthService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
 
   }
 
-  signInGoggle(){
+  
+  signInGoggle(): void{
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
   SignUp(){
