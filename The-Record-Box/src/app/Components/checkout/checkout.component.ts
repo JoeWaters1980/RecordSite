@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from 'src/model/products';
 import { ServicesService } from 'src/services/services.service';
 
 @Component({
@@ -9,6 +10,8 @@ import { ServicesService } from 'src/services/services.service';
 export class CheckoutComponent implements OnInit {
   title = "checkout";
   loggedIN = false;
+  cartTotal = 0;
+  cartItems: Product[] = [];
   url ="https://the-record-box.auth.eu-west-1.amazoncognito.com/login?client_id=7u7om8dajnpknpujta0phif86&response_type=code&scope=phone+email+openid+aws.cognito.signin.user.admin+profile&redirect_uri=http://localhost:4200";
   constructor() { }
 
@@ -17,4 +20,6 @@ export class CheckoutComponent implements OnInit {
   goToLogin(){
     window.open(this.url)
   }
+  processOrder(){}
+  clearCartItems(){}
 }

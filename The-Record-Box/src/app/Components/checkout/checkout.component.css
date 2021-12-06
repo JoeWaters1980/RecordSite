@@ -1,4 +1,7 @@
 .container{
+    align-content: center;
     padding: 2em;
     margin: 2%;
+    background-color: #03771a;
 }
+
