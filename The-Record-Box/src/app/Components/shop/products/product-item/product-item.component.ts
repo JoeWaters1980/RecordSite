@@ -20,4 +20,6 @@ export class ProductItemComponent implements OnInit {
   AddToCartHandle(){
     this.msg.sendMessage(this.productItem);
   }
+
+  
 }

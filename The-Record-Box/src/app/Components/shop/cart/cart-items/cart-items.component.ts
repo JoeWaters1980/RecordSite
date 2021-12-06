@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { cartItems } from 'src/interface/cart';
+import { MessengerService } from 'src/services/messenger.service';
 
 @Component({
   selector: 'app-cart-items',
@@ -10,9 +11,11 @@ export class CartItemsComponent implements OnInit {
  
   @Input() cartItem:any;
   
-  constructor() { }
+  constructor(private msg: MessengerService) { }
 
   ngOnInit() {
   }
-  removeFromCart(){}
+  removeFromCart(){
+      this.msg.removeProductMessage(this.cartItem);
+  }
 }

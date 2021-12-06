@@ -30,5 +30,7 @@ listProducts:Product[] = []
         this.listProducts= Object.values(data.Items);
         console.log(this.listProducts);
       });
+
+  
 }
 }
