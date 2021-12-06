@@ -1,10 +1,9 @@
     <div class="cart-items">
       <span><p>{{cartItem.category}}</span>
       <span><p>{{cartItem.name}}</span>
-      <span>{{cartItem.qty}}</span>
-      <span>price {{ cartItem.price | currency:' € '}}</span>
+      <span><p>{{cartItem.qty}}</p></span>
+      <span><p>price {{ cartItem.price | currency:' € '}}</p></span>
       <button type="button" class="btn btn sm" (click)="removeFromCart()">Remove</button>
-      
     </div>
     <div>
     </div>

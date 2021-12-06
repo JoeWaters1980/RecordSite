@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from 'src/model/products';
-import { ServicesService } from 'src/services/services.service';
+import { Observable } from 'rxjs';
+import { CartItems } from 'src/model/cart';
+import { ProductService } from 'src/services/product.service';
+import { HttpClient } from '@angular/common/http';
+import { cartUrl } from 'src/app/Api/api';
 
 @Component({
   selector: 'app-checkout',
@@ -11,15 +14,26 @@ export class CheckoutComponent implements OnInit {
   title = "checkout";
   loggedIN = false;
   cartTotal = 0;
-  cartItems: Product[] = [];
+  cartItems: CartItems[] = [];
+  productList: CartItems[]=[];
   url ="https://the-record-box.auth.eu-west-1.amazoncognito.com/login?client_id=7u7om8dajnpknpujta0phif86&response_type=code&scope=phone+email+openid+aws.cognito.signin.user.admin+profile&redirect_uri=http://localhost:4200";
-  constructor() { }
+  
+  
+  constructor(private http: HttpClient, private productService: ProductService,) { }
 
   ngOnInit(): void {
+
   }
   goToLogin(){
     window.open(this.url)
   }
-  processOrder(){}
+  // loadProducts() {
+  //   this.productService.getProducts().subscribe((products) => {
+  //     this.productList = products;
+  //   })
+  // }
+  processOrder(product:CartItems):Observable<any>{
+    return this.http.post(cartUrl,{product})
+  }
   clearCartItems(){}
 }

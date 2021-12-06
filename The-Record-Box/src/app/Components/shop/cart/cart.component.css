@@ -1,6 +1,8 @@
 .card-body,li{
     background-color: #f0c92e;
     border-color: #d30521;
+    margin: 2%;
+    color: #d30521;
   
 
 }
@@ -33,4 +35,8 @@
 }
 .text,p{
     color: #d30521;
+}
+.list-group-item:active{
+    color: #d30521;
+    border-color: #d30521;
 }

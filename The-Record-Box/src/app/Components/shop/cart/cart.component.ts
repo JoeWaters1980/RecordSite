@@ -29,7 +29,9 @@ export class CartComponent implements OnInit {
 
   
   }
-  goToCheckOut(){}
+  goToCheckOut(){
+   
+  }
 
   clearCartItems(){}
 }
