@@ -6,6 +6,11 @@
 .container{
     text-align: center;
     margin: 0em; 
-    display:flexbox;
+    
  
+}
+.col-sm-4 {
+    align-items: center;
+    color: #03771a;
+    font-size: x-large;
 }

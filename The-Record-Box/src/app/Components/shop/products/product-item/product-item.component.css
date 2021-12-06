@@ -1,23 +1,23 @@
 .card{
-    background-color: #152246;
-    color: silver;
+    background-color: #0a0a0a;
+    border-color: #f0c92e;
     /* align-items: center; */
 }
 .card,h6{
     text-align:  center;
-    color: silver;
+    color: #f0c92e;
 }
 .card-body,p{
-    color: silver;}
+    color: #f0c92e;}
     
 .card-text{
-    color: silver;
+    color: #f0c92e;
 }
 .btn{
-    background-color: black;
-    color:silver;
-    outline-color: #152246;
+    background-color: #0a0a0a;
+    color:#f0c92e;
+    border-color: #f0c92e;
 }
 .text{
-    color: silver;
+    color: #f0c92e;
 }

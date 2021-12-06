@@ -13,7 +13,7 @@
           <label class="btn btn-outline-success" routerLink='/shop' for="btnradio2">{{shop}}</label>
         
           <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-          <label class="btn btn-outline-success"  routerLink='/Login' for="btnradio3">{{login}}</label>
+          <label class="btn btn-outline-success"  (click)="logIn()" for="btnradio3">{{login}}</label>
         
           <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
           <label class="btn btn-outline-success" routerLink='/checkout' for="btnradio4">{{checkout}}</label>

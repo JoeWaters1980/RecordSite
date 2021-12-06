@@ -1,7 +1,7 @@
 .card-body,li{
     background-color: #f0c92e;
     border-color: #d30521;
-    color: #8499b1;
+  
 
 }
 .text,label{
@@ -31,6 +31,6 @@
     padding:2%;
 
 }
-.text{
+.text,p{
     color: #d30521;
 }
