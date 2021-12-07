@@ -10,6 +10,7 @@ export class MessengerService {
   subject = new Subject()
   removeSubject = new Subject()
   moveSubject = new Subject()
+  checkSubject= new Subject()
 
   constructor() { }
 

@@ -27,6 +27,7 @@ import {
   SocialLoginModule,
 } from 'angularx-social-login';
 import { GoogleLoginProvider } from 'angularx-social-login';
+import { ItemsInCartComponent } from './Components/checkout/items-in-cart/items-in-cart.component';
 
 /* Adding the routes for navigation */
 const routes: Routes = [
@@ -58,6 +59,7 @@ const routes: Routes = [
     FiltersComponent,
     CartItemsComponent,
     ProductItemComponent,
+    ItemsInCartComponent,
   ],
   imports: [
     BrowserModule,
