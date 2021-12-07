@@ -5,6 +5,7 @@ import {dynamoURL} from 'src/app/Api/api';
 import { Observable, throwError } from 'rxjs';
 import{map,catchError}from 'rxjs/operators';
 import { Products } from 'src/interface/Products';
+import { cartItems } from 'src/interface/cart';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,7 @@ export class ProductService {
 
   constructor(private httpClient:HttpClient) { }
 
-  // getProducts():Observable<Products[]>{
+  // getCartProducts():Observable<cartItems[]>{
   //   return this.httpClient.get<Products[]>(dynamoURL);
   // }
   getProducts(){

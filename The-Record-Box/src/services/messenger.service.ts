@@ -31,7 +31,7 @@ export class MessengerService {
     return this.removeSubject.asObservable()
   }
 
-  checkOut(){
+  getcheckOut(){
   return this.moveSubject.asObservable()
   }
 

@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { cartUrl } from 'src/app/Api/api';
 import { MessengerService } from 'src/services/messenger.service';
 import { LoginUrl } from 'src/app/Api/api';
+import { Product } from 'src/model/products';
 
 @Component({
   selector: 'app-checkout',
@@ -20,10 +21,11 @@ export class CheckoutComponent implements OnInit {
 
   constructor(private http: HttpClient, private msg: MessengerService) {}
 
-  ngOnInit(): void {
-    this.msg.checkOut().subscribe((checkOutItems: any) => {
+  ngOnInit(){
+    this.msg.getcheckOut().subscribe((checkOutItems: any) => {
       console.log(checkOutItems.length);
         this.cartItems = checkOutItems;
+        this.cartItems= Object.values(checkOutItems);
         console.log(this.cartItems);
     });
   }
@@ -36,3 +38,9 @@ export class CheckoutComponent implements OnInit {
   }
   clearCartItems() {}
 }
+// getProducts(){
+//   this.services.getProducts().subscribe((data:any) =>{
+//     // console.log(data);
+//     this.listProducts= Object.values(data.Items);
+//     // console.log(this.listProducts);
+//   });

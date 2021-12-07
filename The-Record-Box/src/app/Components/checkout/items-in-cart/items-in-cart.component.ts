@@ -15,6 +15,9 @@ export class ItemsInCartComponent implements OnInit {
   constructor(private msg: MessengerService) { }
 
   ngOnInit(): void {
-  }
 
+  }
+  AddToCartHandle(){
+    this.msg.sendMessage(this.itemsInCart);
+  }
 }
