@@ -8,6 +8,7 @@ export class CartItems {
   productPrice: number;
   qty: number;
   Id: String;
+  
 
   constructor(Id: string, product: Product, qty = 1) {
     this.Id = Id;
