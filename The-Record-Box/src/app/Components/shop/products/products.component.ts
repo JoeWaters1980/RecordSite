@@ -28,7 +28,7 @@ listProducts:Product[] = []
       this.services.getProducts().subscribe((data:any) =>{
         // console.log(data);
         this.listProducts= Object.values(data.Items);
-         console.log(this.listProducts);
+        //  console.log(this.listProducts);
       });
 
   

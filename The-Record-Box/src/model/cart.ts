@@ -1,18 +1,18 @@
 import { Product } from './products';
 
 export class CartItems {
-  // productId: string;
   productName: string;
   productCategory: string;
   productDescription: string;
   productPrice: number;
   qty: number;
-  Id: String;
+  productId: String;
+  cartId:String;
   
 
-  constructor(Id: string, product: Product, qty = 1) {
-    this.Id = Id;
-    // this.productId = product.Id;
+  constructor(id: string, product: Product, qty = 1) {
+    this.cartId=id;
+     this.productId = product.Id;
     this.productName = product.name;
     this.productDescription = product.description;
     this.productCategory = product.category;

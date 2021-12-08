@@ -6,6 +6,7 @@ import { cartUrl } from 'src/app/Api/api';
 import { MessengerService } from 'src/services/messenger.service';
 import { LoginUrl } from 'src/app/Api/api';
 import { Product } from 'src/model/products';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-checkout',
@@ -13,19 +14,24 @@ import { Product } from 'src/model/products';
   styleUrls: ['./checkout.component.css'],
 })
 export class CheckoutComponent implements OnInit {
+  productItem!: Product;
   title = 'checkout';
   loggedIN = false;
   cartTotal = 0;
-  cartItems: CartItems[] = [];
+  cartItems: CartItems[] = [{productDescription:'discription',productCategory:'category',productName:'Name',productPrice:1,qty:1,cartId:'1',productId:'123'}];
   url = LoginUrl;
+  // cartItems: CartItems[]=[];
 
   constructor(private http: HttpClient, private msg: MessengerService) {}
 
   ngOnInit(){
     this.msg.getcheckOut().subscribe((checkOutItems: any) => {
       console.log(checkOutItems.length);
-        this.cartItems = checkOutItems;
-        this.cartItems= Object.values(checkOutItems);
+        this.cartItems =
+        checkOutItems.map((data:CartItems)  => 
+         {
+          return data;
+        });
         console.log(this.cartItems);
     });
   }

@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { CartItems } from 'src/model/cart';
-import { Product } from 'src/model/products';
 import { MessengerService } from 'src/services/messenger.service';
 
 @Component({
@@ -10,7 +9,7 @@ import { MessengerService } from 'src/services/messenger.service';
 })
 export class ItemsInCartComponent implements OnInit {
 
-  @Input() itemsInCart!:any;
+  @Input() itemsInCart!:CartItems;
   
   constructor(private msg: MessengerService) { }
 

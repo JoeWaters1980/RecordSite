@@ -1,5 +1,5 @@
 export class Product {
-  // Id: string;
+   Id: string;
   name: string;
   category: string;
   description: string;
@@ -8,14 +8,14 @@ export class Product {
   qty: number;
 
   constructor(
-    // Id: string,
+     Id: string,
     name: string,
     description:string,
     category:string,
     price:number,
     image:string
   ) {
-    // this.Id = Id;
+     this.Id = Id;
     this.name = name;
     this.description = description;
     this.category = category;
