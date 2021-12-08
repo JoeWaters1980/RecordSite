@@ -8,6 +8,7 @@ export class CartItems {
   qty: number;
   productId: String;
   cartId:String;
+  productImage:string;
   
 
   constructor(id: string, product: Product, qty = 1) {
@@ -18,6 +19,7 @@ export class CartItems {
     this.productCategory = product.category;
     this.productPrice = product.price;
     this.qty = qty;
+    this.productImage= product.Image;
   }
 }
 

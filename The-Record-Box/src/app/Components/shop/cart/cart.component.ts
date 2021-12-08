@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterLink, Router } from '@angular/router';
 import { Products } from 'src/interface/Products';
 import { Product } from 'src/model/products';
 import { MessengerService } from 'src/services/messenger.service';
@@ -12,7 +13,7 @@ export class CartComponent implements OnInit {
   cartItems: Product[] = [];
 
   cartTotal = 0;
-  constructor(private msg: MessengerService) {}
+  constructor(private msg: MessengerService, private _router:Router) {}
 
   ngOnInit() {
 
@@ -49,7 +50,10 @@ export class CartComponent implements OnInit {
     );
   }
   goToCheckOut(){
-   this.msg.MoveToCheckOut(this.cartItems);
+    this._router.navigateByUrl("/checkout",{state:{data:this.cartItems}});
+  //  this.msg.MoveToCheckOut(this.cartItems);
+   
+   
   }
 
   clearCartItems(){}
