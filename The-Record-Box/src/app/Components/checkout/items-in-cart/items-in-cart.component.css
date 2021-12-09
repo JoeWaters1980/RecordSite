@@ -1,3 +1,28 @@
 .card{
-    color: white;
-} 
+    background-color: #0a0a0a;
+    border-color: #f0c92e;
+}
+.card,h6{
+    text-align:  center;
+    color: #f0c92e;
+}
+.card-body,p{
+    color: #f0c92e;}
+    
+.card-text{
+    color: #f0c92e;
+}
+.btn{
+    background-color: #0a0a0a;
+    color:#f0c92e;
+    border-color: #f0c92e;
+}
+.text{
+    color: #f0c92e;
+}
+.container{
+    align-content: center;
+    padding: 2em;
+    margin: 2%;
+    background-color: #03771a;
+}

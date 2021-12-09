@@ -1,11 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { observable, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { CartItems } from 'src/model/cart';
 import { HttpClient } from '@angular/common/http';
 import { cartUrl } from 'src/app/Api/api';
 import { MessengerService } from 'src/services/messenger.service';
 import { LoginUrl } from 'src/app/Api/api';
 import { Product } from 'src/model/products';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -14,13 +15,12 @@ import { Product } from 'src/model/products';
 })
 export class CheckoutComponent implements OnInit {
   title = 'checkout';
-  loggedIN = false;
+  loggedIn = false;
   cartTotal = 0;
-  // cartItems: CartItems[] = [{productDescription:'discription',productCategory:'category',productName:'Name',productPrice:1,qty:1,cartId:'1',productId:'123'}];
   url = LoginUrl;
   cartItems: CartItems[]=[];
 
-  constructor(private http: HttpClient, private msg: MessengerService) {
+  constructor(private http: HttpClient, private msg: MessengerService, private _router :Router) {
     // console.log(" constructor");
     
     
@@ -31,7 +31,7 @@ export class CheckoutComponent implements OnInit {
          {
           return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:'1',productId:product.Id, productImage:product.Image}
         });
-        console.log(this.cartItems)
+        // console.log(this.cartItems)
 
     // this.msg.getcheckOut().subscribe((checkOutItems: any) => {
     //   console.log(checkOutItems.length);
@@ -45,7 +45,8 @@ export class CheckoutComponent implements OnInit {
     // });
   }
   goToLogin() {
-    window.open(this.url);
+    window.open(this.url)
+    return this.loggedIn===true;
   }
 
   processOrder(product: CartItems): Observable<any> {
@@ -53,9 +54,3 @@ export class CheckoutComponent implements OnInit {
   }
   clearCartItems() {}
 }
-// getProducts(){
-//   this.services.getProducts().subscribe((data:any) =>{
-//     // console.log(data);
-//     this.listProducts= Object.values(data.Items);
-//     // console.log(this.listProducts);
-//   });

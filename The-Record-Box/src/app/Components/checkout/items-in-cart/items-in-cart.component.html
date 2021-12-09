@@ -1,20 +1,17 @@
+<div class= container>
 <div class="card shadow-sm">
   <h6>{{itemsInCart.productName}}</h6>
-  <h6>{{itemsInCart.productId}}</h6>
   <img
     class="bd-placeholder-img card-img-top p-2"
-    width="100%"
+    width="80%"
     src="{{itemsInCart.productImage}}"/>
   <div class="card-body">
     <p class="card-text">{{ itemsInCart.productDescription }}</p>
-    <p class="card-text">{{ itemsInCart.qty }}</p>
+    <p class="card-text">Quantity {{ itemsInCart.qty }}</p>
     <div class="d-flex justify-content-between align-items-center">
-      <div class="btn-group">
-        <button type="button" class="btn btn-sm btn-outline-secondary">
-          Add to cart
-        </button>
-      </div>
-      <div class="text">{{ itemsInCart.productPrice | currency: "€ " }}</div>
+         <div class="text">Price {{ itemsInCart.productPrice | currency: "€ " }}</div>
+    </div>
     </div>
   </div>
 </div>
+
