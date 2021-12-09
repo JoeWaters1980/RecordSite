@@ -1,23 +1,30 @@
 .container{
-    padding: 2em;
-}
-.card-Home{
     margin: 0%;
-    padding: 5%;
-    background-color: whitesmoke;
+    padding: 3%;
+    background-color: #03771a;
 }
+title,h2{
+    padding: 1%;
+    color: #f0c92e;
+}
+
 .card-body{
     /* margin: 2%;
     padding: 1%; */
-    background-color: #152349;
-    border-color: black;
+    background-color: #0a0a0a;
+    color: #f0c92e;
+    justify-content: center;
 
 }
-.card-text{
-    color: #85055b;
+.card-text,p{
+    color: #f0c92e;
+    
 }
 
-.title{
-    font-size:xx-large;
-    align-content: center;
-}
+.bd-placeholder-img{
+    padding: 1%;
+    border-color: #f0c92e;
+    border-style: solid;
+    max-width: 1200px;
+    max-height: 800px;
+} 
