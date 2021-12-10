@@ -2,9 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CartItems } from 'src/model/cart';
 import { HttpClient } from '@angular/common/http';
-import { cartUrl } from 'src/app/Api/api';
 import { MessengerService } from 'src/services/messenger.service';
-import { LoginUrl } from 'src/app/Api/api';
+import { LoginUrl,cartUrl } from 'src/app/Api/api';
 import { Product } from 'src/model/products';
 import { Router } from '@angular/router';
 
@@ -18,11 +17,11 @@ export class CheckoutComponent implements OnInit {
   loggedIn = false;
   cartTotal = 0;
   url = LoginUrl;
+  cartUrl=cartUrl;
   cartItems: CartItems[]=[];
 
   constructor(private http: HttpClient, private msg: MessengerService, private _router :Router) {
-    // console.log(" constructor");
-    
+     console.log(this.cartUrl);
     
   }
 
@@ -48,9 +47,18 @@ export class CheckoutComponent implements OnInit {
     window.open(this.url)
     return this.loggedIn===true;
   }
-
-  processOrder(product: CartItems): Observable<any> {
-    return this.http.post(cartUrl, { product });
+ 
+  // getProducts(){
+  //   this.services.getProducts().subscribe((data:any) =>{
+  //     // console.log(data);
+  //     this.listProducts= Object.values(data.Items);
+  //     //  console.log(this.listProducts);
+  //   });
+  processOrder() {
+    console.log(cartUrl)
+    // return this.http.post(cartUrl, { cartItems });
+    return this.http.get(cartUrl);
+    
   }
   clearCartItems() {}
 }
