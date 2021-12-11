@@ -30,21 +30,9 @@ export class CheckoutComponent implements OnInit {
          {
           return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:'1',productId:product.Id, productImage:product.Image}
         });
-        // console.log(this.cartItems)
-
-    // this.msg.getcheckOut().subscribe((checkOutItems: any) => {
-    //   console.log(checkOutItems.length);
-    //     this.cartItems =
-    //     checkOutItems.map((product:Product)  => 
-    //      {
-    //       return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:'1',productId:product.Id}
-    //     });
-    //     console.log(this.cartItems+ " subscribe");
-       
-    // });
   }
   goToLogin() {
-    window.open(this.url)
+    window.open(this.url,"_self")
     return this.loggedIn===true;
   }
  

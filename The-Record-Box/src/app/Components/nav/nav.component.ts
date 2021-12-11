@@ -18,6 +18,6 @@ export class NavComponent implements OnInit {
 
   }
   logIn(){
-    window.open(this.url)
+    window.open(this.url,"_self")
   }
 }

@@ -21,12 +21,6 @@ import { ShopComponent } from './Components/shop/shop.component';
 import { FiltersComponent } from './Components/shop/filters/filters.component';
 import { CartItemsComponent } from './Components/shop/cart/cart-items/cart-items.component';
 import { ProductItemComponent } from './Components/shop/products/product-item/product-item.component';
-import {
-  SocialAuthService,
-  SocialAuthServiceConfig,
-  SocialLoginModule,
-} from 'angularx-social-login';
-import { GoogleLoginProvider } from 'angularx-social-login';
 import { ItemsInCartComponent } from './Components/checkout/items-in-cart/items-in-cart.component';
 
 /* Adding the routes for navigation */
@@ -66,23 +60,9 @@ const routes: Routes = [
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    SocialLoginModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: false,
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('https://the-record-box.auth.eu-west-1.amazoncognito.com/login?client_id=7u7om8dajnpknpujta0phif86&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=http://localhost:4200'),
-          },
-        ],
-      } as SocialAuthServiceConfig,
-    },
-  ],
+  
   bootstrap: [AppComponent],
 })
 export class AppModule {}
