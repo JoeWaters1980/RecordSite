@@ -16,7 +16,7 @@ import { cartItems } from 'src/interface/cart';
 export class CheckoutComponent implements OnInit {
   title = 'checkout';
   loggedIn = false;
-  cartTotal = [];
+  cartTotal = 0;
   url = LoginUrl;
   cartUrl=cartUrl;
   cartItems: CartItems[]=[];
@@ -30,8 +30,12 @@ export class CheckoutComponent implements OnInit {
    this.cartItems=window.history.state.data.map((product:Product)  => 
          {
           return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:'1',productId:product.Id, productImage:product.Image}
+
         });
-        console.log(this.cartItems)
+        this.cartItems.forEach(cartItem => {
+          this.cartTotal += (cartItem.productPrice * cartItem.qty)
+        });
+
   }
   goToLogin() {
     window.open(this.url,"_self")

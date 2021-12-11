@@ -12,12 +12,17 @@ export class NavComponent implements OnInit {
   login='Login';
   checkout='Cart';
   url=LoginUrl;
+  idToken='account#id_token=';
   constructor() { }
 
   ngOnInit(): void {
-
+    // const params= new URLSearchParams(window.location.search)
+    // params.get(this.idToken);
+    // console.log(params.get(this.idToken))
   }
   logIn(){
     window.open(this.url,"_self")
+    var access_token = new URLSearchParams(window.location.hash).get('access_token')
+    console.log(access_token)
   }
 }

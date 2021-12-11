@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GoogleLoginProvider,SocialAuthService, SocialUser } from 'angularx-social-login';
+import{LoginUrl} from 'src/app/Api/api'
 
 
 @Component({
@@ -11,16 +11,18 @@ export class LoginComponent implements OnInit {
 
   title='Login';
   // socialUser:SocialUser;
-  constructor(private authService:SocialAuthService) { }
-
+  constructor() { }
+  tokenId="blank";
   ngOnInit() {
-
-  }
-
-  
-  signInGoggle(): void{
-    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-  }
+    // const params= new URLSearchParams(window.location.search)
+    // params.has(this.idToken);
+    // console.log(params.get(this.idToken))
+    var access_token = new URLSearchParams(window.location.hash).get('access_token')
+  //  this.tokenId= access_token;
+    console.log(access_token)
+    return access_token
+// for (const param of params) {
+}
   SignUp(){
     
   }
