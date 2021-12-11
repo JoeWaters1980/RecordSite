@@ -50,9 +50,7 @@ export class CartComponent implements OnInit {
     );
   }
   goToCheckOut(){
-    this._router.navigateByUrl("/checkout",{state:{data:this.cartItems}});
-  //  this.msg.MoveToCheckOut(this.cartItems);
-   
+    this._router.navigateByUrl("/checkout",{state:{data:this.cartItems}}); 
    
   }
 

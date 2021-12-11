@@ -6,6 +6,7 @@ import { MessengerService } from 'src/services/messenger.service';
 import { LoginUrl,cartUrl } from 'src/app/Api/api';
 import { Product } from 'src/model/products';
 import { Router } from '@angular/router';
+import { cartItems } from 'src/interface/cart';
 
 @Component({
   selector: 'app-checkout',
@@ -15,13 +16,13 @@ import { Router } from '@angular/router';
 export class CheckoutComponent implements OnInit {
   title = 'checkout';
   loggedIn = false;
-  cartTotal = 0;
+  cartTotal = [];
   url = LoginUrl;
   cartUrl=cartUrl;
   cartItems: CartItems[]=[];
 
   constructor(private http: HttpClient, private msg: MessengerService, private _router :Router) {
-     console.log(this.cartUrl);
+    //  console.log(this.cartUrl);
     
   }
 
@@ -30,11 +31,23 @@ export class CheckoutComponent implements OnInit {
          {
           return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:'1',productId:product.Id, productImage:product.Image}
         });
+        console.log(this.cartItems)
   }
   goToLogin() {
     window.open(this.url,"_self")
-    return this.loggedIn===true;
+    
   }
+  // SignInCallback(authResults){
+  //   if (authResults['status']['signed_in']{
+  //     AWS.config.credentials=new AWS.CognitoIdentityCredentials({
+  //       IdentityPoolId: '',
+  //       Logins: {
+  //         'accounts.google.com':authResults['id_token']
+  //       }
+  //     });
+  //     AWS.config.credentials.get(function(){})
+  //   });
+  // }
  
   // getProducts(){
   //   this.services.getProducts().subscribe((data:any) =>{
