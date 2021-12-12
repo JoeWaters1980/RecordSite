@@ -9,7 +9,8 @@ export class AccountComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    var access_token = new URLSearchParams(window.location.hash).get('access_token')
+    var access_token = new URLSearchParams(window.location.hash.replace('#','?')).get('access_token')
     console.log(access_token)
+    localStorage.setItem('key', access_token?? '');
     }
   }

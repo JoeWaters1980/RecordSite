@@ -22,6 +22,7 @@ import { FiltersComponent } from './Components/shop/filters/filters.component';
 import { CartItemsComponent } from './Components/shop/cart/cart-items/cart-items.component';
 import { ProductItemComponent } from './Components/shop/products/product-item/product-item.component';
 import { ItemsInCartComponent } from './Components/checkout/items-in-cart/items-in-cart.component';
+import { AdminComponent } from './Components/admin/admin.component';
 
 /* Adding the routes for navigation */
 const routes: Routes = [
@@ -33,6 +34,7 @@ const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path: 'account', component: AccountComponent },
   { path: 'shop', component: ShopComponent },
+  {path: 'admin', component: AdminComponent}
 ];
 
 @NgModule({
@@ -54,6 +56,7 @@ const routes: Routes = [
     CartItemsComponent,
     ProductItemComponent,
     ItemsInCartComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,

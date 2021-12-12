@@ -17,11 +17,11 @@ export class LoginComponent implements OnInit {
     // const params= new URLSearchParams(window.location.search)
     // params.has(this.idToken);
     // console.log(params.get(this.idToken))
-    var access_token = new URLSearchParams(window.location.hash).get('access_token')
-  //  this.tokenId= access_token;
-    console.log(access_token)
-    return access_token
-// for (const param of params) {
+//     var access_token = new URLSearchParams(window.location.hash).get('access_token')
+//   //  this.tokenId= access_token;
+//     console.log(access_token)
+//     return access_token
+// // for (const param of params) {
 }
   SignUp(){
     
