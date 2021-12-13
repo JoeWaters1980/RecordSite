@@ -20,7 +20,7 @@ export class CheckoutService {
     }
 
       
-    return this.httpClient.post<CartItems>(cartUrl,items,httpOptions).pipe(
+    return this.httpClient.post<CartItems>(cartUrl,{items},httpOptions).pipe(
      catchError( error => {
       return throwError('something went wrong');
     }))

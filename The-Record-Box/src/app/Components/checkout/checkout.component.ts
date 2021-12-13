@@ -27,9 +27,9 @@ export class CheckoutComponent implements OnInit {
   }
 
   ngOnInit(){
-   this.cartItems=window.history.state.data?.map((product:Product)  => 
+   this.cartItems=window.history.state.data?.map((product:Product, index:number)  => 
          {
-          return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:'1',productId:product.Id, productImage:product.Image}
+          return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:index+1,productId:product.Id, productImage:product.Image}
 
         });
         this.cartItems?.forEach(cartItem => {
@@ -45,10 +45,13 @@ export class CheckoutComponent implements OnInit {
   }
   
   processOrder() {
-  
+//     var myJsonString = JSON.stringify(this.cartItems);
+// this.checkout.CheckOutItems(myJsonString).subscribe(()=>
 this.checkout.CheckOutItems(this.cartItems).subscribe(()=>
 {
-  console.log('any message')
+ 
+  // console.log(myJsonString)
+  console.log(this.cartItems)
 });
     //  this.http.get(cartUrl, { cartItems },httpOptions);
     // return this.http.get(cartUrl);
