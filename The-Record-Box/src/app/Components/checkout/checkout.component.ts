@@ -45,18 +45,11 @@ export class CheckoutComponent implements OnInit {
   }
   
   processOrder() {
-//     var myJsonString = JSON.stringify(this.cartItems);
-// this.checkout.CheckOutItems(myJsonString).subscribe(()=>
 this.checkout.CheckOutItems(this.cartItems).subscribe(()=>
 {
  
-  // console.log(myJsonString)
   console.log(this.cartItems)
 });
-    //  this.http.get(cartUrl, { cartItems },httpOptions);
-    // return this.http.get(cartUrl);
-
-    
   }
 
   clearCartItems() {}
