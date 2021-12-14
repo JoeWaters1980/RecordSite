@@ -9,7 +9,7 @@
     background-color: #0a0a0a;
     border-color: #f0c92e;
 }
-.card,h6{
+.card,h3{
     text-align:  center;
     color: #f0c92e;
 }
@@ -20,6 +20,7 @@
     color: #f0c92e;
 }
 .btn{
+    margin: 1%;
     background-color: #0a0a0a;
     color:#f0c92e;
     border-color: #f0c92e;
@@ -33,4 +34,23 @@
     padding: 2em;
     margin: 2%;
     background-color: #03771a;
+}
+.form-group{
+    padding: 2em;
+    margin: 2%;
+    align-items: flex-start;
+}
+.container-form{
+    padding: 2%;
+    margin: 3%;
+    background-color: #03771a;
+}
+.row-md-2{
+    padding: 1%;
+    margin: 1%;
+    text-align: left;
+}
+.image{
+    max-width: 100px;
+    max-height: 100px;
 }

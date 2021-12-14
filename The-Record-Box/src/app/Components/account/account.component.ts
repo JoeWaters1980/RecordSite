@@ -12,5 +12,7 @@ export class AccountComponent implements OnInit {
     var access_token = new URLSearchParams(window.location.hash.replace('#','?')).get('access_token')
     console.log(access_token)
     localStorage.setItem('key', access_token?? '');
+    
+    
     }
   }
