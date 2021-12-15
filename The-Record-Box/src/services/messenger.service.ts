@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Product } from 'src/model/products';
+
 
 @Injectable({
   providedIn: 'root'
@@ -15,8 +15,7 @@ export class MessengerService {
   constructor() { }
 
   sendMessage(products: any){
-  //   // console.log(product)
-  //   //for triggering an event which accepts a product.
+
     this.subject.next(products)
   }
   removeProductMessage(product: any){

@@ -1,4 +1,4 @@
-import { NgModule, ErrorHandler } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
@@ -29,8 +29,6 @@ const routes: Routes = [
   { path: '', redirectTo: '/Home', pathMatch: 'full' },
   { path: 'Home', component: HomeComponent },
   { path: 'Login', component: LoginComponent },
-  // { path: 'access', component: AccessComponent },
-  // { path: 'signUp', component: SignUpComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'account', component: AccountComponent },
   { path: 'shop', component: ShopComponent },

@@ -9,7 +9,6 @@
               <label class="row-md-2 form-label" for="Id">Id</label>
               <input id="name" class="row-md-2-form-control" />
             </span>
-
             <span>
               <label class="row-md-2 form-label" for="name">Name</label>
               <input id="name" class="row-md-2-form-control" />
@@ -23,7 +22,9 @@
               <input id="name" class="row-md-2-form-control" />
             </span>
             <span>
-              <label class="row-md-2 form-label" for="description">description</label>
+              <label class="row-md-2 form-label" for="description"
+                >description</label
+              >
               <input id="name" class="row-md-2-form" />
             </span>
             <span>
@@ -34,8 +35,8 @@
               <label class="row-md-2 form-label" for="name">category</label>
               <input id="name" class="row-md-2-form" />
             </span>
-            <button input name="" id="" class="btn btn col-sm-2" type="button">
-              Add New Item
+            <button  class="btn btn col-md-2" type="button" (click)="addNewProduct">
+              Add New Product
             </button>
           </div>
         </span>
@@ -55,12 +56,12 @@
         <div class="card-text">
           <div class="form-group">
             <ul>
-              <p>Id: {{ product.Id }}</p>
+              <p>Id: {{ product.productId}}</p>
               <p>Name: {{ product.name }}</p>
-              <img class=image src= '{{ product.Image }}'/>
+              <img class="image" src="{{ product.Image }}" />
               <p>category: {{ product.category }}</p>
               <p>price: {{ product.price }}</p>
-              <p>quantity: {{ product.quantity }}</p>
+              <p>quantity: {{ product.Quantity }}</p>
               <p>description: {{ product.description }}</p>
             </ul>
           </div>
