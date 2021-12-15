@@ -31,8 +31,3 @@ export class Product {
   }
 }
 
-// export interface ProductsResponse {
-//     Count: number;
-//     ScannedCount: number;
-//     Items: Product[];
-// }
