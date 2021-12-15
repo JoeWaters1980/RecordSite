@@ -11,6 +11,7 @@ import { ProductService } from 'src/services/product.service';
 export class AdminComponent implements OnInit {
   listProducts: Product[] = [];
   ProductService: any;
+  addProduct!:Product;
 
   // constructor(private productService: ProductService) { }
   constructor(public http: HttpClient, private services: ProductService) {}
@@ -27,5 +28,11 @@ export class AdminComponent implements OnInit {
       //  console.log(this.listProducts);
     });
   }
-  addNewProduct(){}
+  addNewProduct(){
+    this.services.addNewProduct(this.addProduct).subscribe(()=>
+    {
+      console.log(this.addProduct);
+    });
+    
+  }
 }

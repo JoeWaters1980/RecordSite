@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from 'src/model/products';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { dynamoURL } from 'src/app/Api/api';
 import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
@@ -27,14 +27,20 @@ export class ProductService {
     );
   }
 
-  // addNewProduct(){
-  //   return this.httpClient.post<Product>(dynamoURL).pipe(
-  //     map((data: Product) => {
-  //       return data;
-  //     }),
-  //     catchError((error) => {
-  //       return throwError('something went wrong');
-  //     })
-  //   );
-  // }
+  addNewProduct(items:Product){
+    const httpOptions = {
+      headers: new HttpHeaders({
+        'Content-Type':  'application/json',
+        Authorization: `bearer ${localStorage.getItem('key')}`
+      })
+    }
+    return this.httpClient.post<Product>(dynamoURL,items, httpOptions).pipe(
+      map((data: Product) => {
+        return data;
+      }),
+      catchError((error) => {
+        return throwError('something went wrong');
+      })
+    );
+  }
 }

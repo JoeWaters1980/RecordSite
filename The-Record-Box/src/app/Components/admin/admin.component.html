@@ -2,40 +2,40 @@
   <div class="card shadow-sm">
     <h3>Add A New Product</h3>
     <div class="row">
-      <form>
+      <form (ngSubmit)="addNewProduct()">
         <span>
-          <div class="container-form">
+          <div class="container-form ">
             <span>
-              <label class="row-md-2 form-label" for="Id">Id</label>
-              <input id="name" class="row-md-2-form-control" />
+              <label class="row-md-2 form-label" for="Id">ProductId</label>
+              <input ngClass="{addProduct.productId}" class="row-md-2-form-control" />
             </span>
             <span>
               <label class="row-md-2 form-label" for="name">Name</label>
-              <input id="name" class="row-md-2-form-control" />
+              <input ngClass="{addProduct.name}" class="row-md-2-form-control" />
             </span>
             <span>
               <label class="row-md-2 form-label" for="Image">Image</label>
-              <input id="name" class="row-md-2-form-control" />
+              <input ngClass="{addProduct.Image}" class="row-md-2-form-control" />
             </span>
             <span>
               <label class="row-md-2 form-label" for="price">price</label>
-              <input id="name" class="row-md-2-form-control" />
+              <input ngClass="{addProduct.price}" class="row-md-2-form-control" />
             </span>
             <span>
               <label class="row-md-2 form-label" for="description"
                 >description</label
               >
-              <input id="name" class="row-md-2-form" />
+              <input ngClass="{addProduct.description}" quantityclass="row-md-2-form" />
             </span>
             <span>
               <label class="row-md-2 form-label" for="quantity">quantity</label>
-              <input id="name" class="row-md-2-form" />
+              <input ngClass="{addProduct.Quantity}" class="row-md-2-form" />
             </span>
             <span>
               <label class="row-md-2 form-label" for="name">category</label>
-              <input id="name" class="row-md-2-form" />
+              <input ngClass="{addProduct.category}" class="row-md-2-form" />
             </span>
-            <button  class="btn btn col-md-2" type="button" (click)="addNewProduct">
+            <button  class="btn btn col-md-2" type="button" (click)="addNewProduct()">
               Add New Product
             </button>
           </div>

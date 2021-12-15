@@ -48,7 +48,7 @@ export class CheckoutComponent implements OnInit {
 this.checkout.CheckOutItems(this.cartItems).subscribe(()=>
 {
  
-  console.log(this.cartItems)
+  // console.log(this.cartItems)
 });
   }
 
