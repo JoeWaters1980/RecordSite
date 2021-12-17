@@ -1,0 +1,13 @@
+FROM  node:16.13.1
+
+WORKDIR /The-Record-box 
+
+ENV PORT 4200
+
+COPY package.json /The-Record-box/package.json
+
+RUN npm install
+
+COPY . /The-Record-box
+
+CMD [ "node" ]
