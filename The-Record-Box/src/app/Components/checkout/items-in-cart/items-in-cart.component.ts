@@ -16,7 +16,7 @@ export class ItemsInCartComponent implements OnInit {
   constructor(private msg: MessengerService) { }
 
   ngOnInit(): void {
-    console.log(this.itemsInCart.productPrice)
+    console.log(this.itemsInCart)
     this.cartTotal += (this.itemsInCart.productPrice* this.itemsInCart.qty);
   }
   AddToCartHandle(){

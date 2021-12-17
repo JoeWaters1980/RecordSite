@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/model/products';
 import { ProductService } from 'src/services/product.service';
+import { FormGroup,FormBuilder,Validators, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-admin',
@@ -9,16 +10,20 @@ import { ProductService } from 'src/services/product.service';
   styleUrls: ['./admin.component.css'],
 })
 export class AdminComponent implements OnInit {
+  @Input()
+  newItem:any=FormGroup;
+
   listProducts: Product[] = [];
   ProductService: any;
   addProduct!:Product;
-
+ 
   // constructor(private productService: ProductService) { }
-  constructor(public http: HttpClient, private services: ProductService) {}
+  constructor(public http: HttpClient, private services: ProductService, private formBuilder:FormBuilder) {}
 
   ngOnInit() {
     this.getProducts();
     //  console.log(this.ProductService.getProducts().subscribe)
+    this.addAProduct();
   }
 
   getProducts() {
@@ -33,6 +38,27 @@ export class AdminComponent implements OnInit {
     {
       console.log(this.addProduct);
     });
-    
+  }
+  addAProduct(){
+    this.newItem=this.formBuilder.group({
+      name:new FormControl("name"),
+      productId:new FormControl("productId"),
+      Image:new FormControl("Image"),
+      price:new FormControl(0.00),
+      description:new FormControl(''),
+      Quantity:new FormControl(0),
+      category:new FormControl('')
+    })
+
+  }
+
+  onSubmit(_newItem:any){
+    this.services.addNewProduct(this.newItem.value).subscribe(()=>
+    {
+      console.log(this.newItem.value);
+    });
+    // this.name=newItem.name
+  
+
   }
 }
