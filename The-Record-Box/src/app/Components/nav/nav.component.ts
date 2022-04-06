@@ -13,6 +13,7 @@ export class NavComponent implements OnInit {
   checkout='Cart';
   admin ='Admin';
   url=LoginUrl;
+  isLogededIn = false;
   idToken='account#id_token=';
   constructor() { }
 
@@ -23,5 +24,6 @@ export class NavComponent implements OnInit {
     window.open(this.url,"_self")
     var access_token = new URLSearchParams(window.location.hash).get('access_token')
     console.log(access_token)
+    return access_token;
   }
 }
