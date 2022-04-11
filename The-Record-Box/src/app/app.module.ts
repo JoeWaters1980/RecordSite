@@ -23,6 +23,9 @@ import { CartItemsComponent } from './Components/shop/cart/cart-items/cart-items
 import { ProductItemComponent } from './Components/shop/products/product-item/product-item.component';
 import { ItemsInCartComponent } from './Components/checkout/items-in-cart/items-in-cart.component';
 import { AdminComponent } from './Components/admin/admin.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { PopUpComponent } from './Components/pop-up/pop-up.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /* Adding the routes for navigation */
 const routes: Routes = [
@@ -55,13 +58,16 @@ const routes: Routes = [
     ProductItemComponent,
     ItemsInCartComponent,
     AdminComponent,
+    PopUpComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatDialogModule,
     RouterModule.forRoot(routes),
+    BrowserAnimationsModule,
   ],
   
   bootstrap: [AppComponent],

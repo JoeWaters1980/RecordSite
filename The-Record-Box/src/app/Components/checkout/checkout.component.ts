@@ -7,6 +7,8 @@ import { LoginUrl,cartUrl } from 'src/app/Api/api';
 import { Product } from 'src/model/products';
 import { Router } from '@angular/router';
 import { CheckoutService } from 'src/services/checkout.service';
+import {MatDialog} from '@angular/material/dialog';
+import { PopUpComponent } from '../pop-up/pop-up.component';
 
 @Component({
   selector: 'app-checkout',
@@ -21,7 +23,7 @@ export class CheckoutComponent implements OnInit {
   cartUrl=cartUrl;
   cartItems: CartItems[]=[];
 
-  constructor(private http: HttpClient, private msg: MessengerService, private _router :Router, private checkout:CheckoutService) {
+  constructor(private http: HttpClient, private msg: MessengerService, private _router :Router, private checkout:CheckoutService, private dialogRef:MatDialog) {
     //  console.log(this.cartUrl);
     
   }
@@ -43,7 +45,13 @@ export class CheckoutComponent implements OnInit {
     window.open(this.url,"_self")
     
   }
-  
+  checkLogin(){
+
+      console.log("in if for popup")
+      this.dialogRef.open(PopUpComponent);
+
+    // this.dialogRef.open(PopUpComponent);
+  }
   processOrder() {
 this.checkout.CheckOutItems(this.cartItems).subscribe(()=>
 {
