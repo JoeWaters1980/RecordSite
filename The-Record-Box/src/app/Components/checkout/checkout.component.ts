@@ -23,6 +23,8 @@ export class CheckoutComponent implements OnInit {
   cartUrl=cartUrl;
   cartItems: CartItems[]=[];
 
+  //logic for checking logged in use the *ngIf like nav login.
+
   constructor(private http: HttpClient, private msg: MessengerService, private _router :Router, private checkout:CheckoutService, private dialogRef:MatDialog) {
     //  console.log(this.cartUrl);
     

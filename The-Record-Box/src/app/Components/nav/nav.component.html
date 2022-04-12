@@ -1,31 +1,109 @@
 <div>
   <app-header></app-header>
-<nav class="navbar navbar">
-  <a class="navbar-brand" href="#">
-    <img src="assets/images/TheRecordboxLarge.jpg"alt="logo" width=72 height=57 class="rounded">
-  </a>
-      <div class="row" >
-        <div class="btn-group btn-group-lg" role="group" aria-label="Basic radio toggle button group">
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-          <label class="btn btn-outline-success" routerLink='/Home' for="btnradio1">{{home}}</label>
-        
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
-          <label class="btn btn-outline-success" routerLink='/shop' for="btnradio2">{{shop}}</label>
-        
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
-          <label class="btn btn-outline-success"  (click)="logIn()" for="btnradio3">{{login}}</label>
-        
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off">
-          <label class="btn btn-outline-success" routerLink='/checkout' for="btnradio4">{{checkout}}</label>
-          <div *ngIf="isLogededIn">
-          <input type="radio" class="btn-check" name="btnradio" id="btnradio4" autocomplete="off" >
-          <label class="btn btn-outline-success" routerLink='/admin' for="btnradio4" >{{admin}}</label>
-          </div>
-        </div>
+  <nav class="navbar navbar">
+    <a class="navbar-brand" href="#">
+      <img
+        src="assets/images/TheRecordboxLarge.jpg"
+        alt="logo"
+        width="72"
+        height="57"
+        class="rounded"
+      />
+    </a>
+    <div class="row">
+      <div
+        class="btn-group btn-group-lg"
+        role="group"
+        aria-label="Basic radio toggle button group"
+      >
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio1"
+          autocomplete="off"
+          checked
+        />
+        <label
+          class="btn btn-outline-success"
+          routerLink="/Home"
+          for="btnradio1"
+          >{{ home }}</label
+        >
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio2"
+          autocomplete="off"
+        />
+        <label
+          class="btn btn-outline-success"
+          routerLink="/shop"
+          for="btnradio2"
+          >{{ shop }}</label
+        >
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio3"
+          autocomplete="off"
+          *ngIf="!isLoggedIn"
+        />
+        <label
+          class="btn btn-outline-success"
+          (click)="logIn()"
+          for="btnradio3"
+          *ngIf="!isLoggedIn"
+          >{{ login }}</label
+        >
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradioLO"
+          autocomplete="off"
+          *ngIf="isLoggedIn"
+        />
+        <label
+          class="btn btn-outline-success"
+          (click)="logOut()"
+          for="btnradioLO" *ngIf="isLoggedIn"
+          >{{ logOutText }}</label
+        >
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio4"
+          autocomplete="off"
+        />
+        <label
+          class="btn btn-outline-success"
+          routerLink="/checkout"
+          for="btnradio4"
+          >{{ checkout }}</label
+        >
+
+        <input
+          type="radio"
+          class="btn-check"
+          name="btnradio"
+          id="btnradio4"
+          autocomplete="off"
+        />
+        <label
+          class="btn btn-outline-success"
+          routerLink="/admin"
+          for="btnradio4"
+          >{{ admin }}</label
+        >
+      </div>
     </div>
-</nav>
+  </nav>
 </div>
-
-    
-
-      
