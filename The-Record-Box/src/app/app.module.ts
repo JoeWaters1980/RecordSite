@@ -26,6 +26,7 @@ import { AdminComponent } from './Components/admin/admin.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PopUpComponent } from './Components/pop-up/pop-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OrderPlacedComponent } from './Components/order-placed/order-placed.component';
 
 /* Adding the routes for navigation */
 const routes: Routes = [
@@ -59,6 +60,7 @@ const routes: Routes = [
     ItemsInCartComponent,
     AdminComponent,
     PopUpComponent,
+    OrderPlacedComponent,
   ],
   imports: [
     BrowserModule,

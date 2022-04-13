@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { CheckoutService } from 'src/services/checkout.service';
 import {MatDialog} from '@angular/material/dialog';
 import { PopUpComponent } from '../pop-up/pop-up.component';
+import { OrderPlacedComponent } from '../order-placed/order-placed.component';
 
 @Component({
   selector: 'app-checkout',
@@ -63,6 +64,7 @@ export class CheckoutComponent implements OnInit {
   processOrder() {
 this.checkout.CheckOutItems(this.cartItems).subscribe(()=>
 {
+  this.dialogRef.open(OrderPlacedComponent);
  
    console.log(this.cartItems)
 });
