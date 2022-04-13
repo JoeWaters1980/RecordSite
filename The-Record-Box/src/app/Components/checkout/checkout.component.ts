@@ -17,7 +17,7 @@ import { PopUpComponent } from '../pop-up/pop-up.component';
 })
 export class CheckoutComponent implements OnInit {
   title = 'checkout';
-  loggedIn = false;
+  isLoggedIn = false;
   cartTotal = 0;
   url = LoginUrl;
   cartUrl=cartUrl;
@@ -31,6 +31,12 @@ export class CheckoutComponent implements OnInit {
   }
 
   ngOnInit(){
+
+    var loginkey = localStorage.getItem('key');
+    
+    this.isLoggedIn=(loginkey!==null);
+    console.log("are we logged in" + this.isLoggedIn);
+
    this.cartItems=window.history.state.data?.map((product:Product, index:number)  => 
          {
           return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:index+1,productId:product.Id, productImage:product.Image}

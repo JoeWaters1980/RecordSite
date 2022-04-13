@@ -28,8 +28,8 @@ export class NavComponent implements OnInit {
   logIn(){
     window.open(this.url,"_self")
     var access_token = new URLSearchParams(window.location.hash).get('access_token')
-    console.log(access_token)
-    console.log("are we working")
+    // console.log(access_token)
+    // console.log("are we working")
     return access_token;
   }
 

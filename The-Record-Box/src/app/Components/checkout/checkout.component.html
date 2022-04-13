@@ -11,7 +11,7 @@
       <app-items-in-cart [itemsInCart]="item"></app-items-in-cart>
     </div>
     <div class="button-group">
-      <button type="button" class="btn btn" (click)="processOrder()">
+      <button type="button" class="btn btn" *ngIf="isLoggedIn" (click)="processOrder()">
         Process Order
       </button>
 
@@ -21,7 +21,7 @@
     <p>Total {{ cartTotal | currency: "€ " }}</p>
   </div>
   <div class="button-group">
-    <button type="button" class="btn btn" (click)="checkLogin()">
+    <button type="button" class="btn btn" *ngIf="!isLoggedIn" (click)="checkLogin()">
       Please Log In
     </button>
   </div>
