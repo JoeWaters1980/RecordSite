@@ -13,6 +13,7 @@ export class NavComponent implements OnInit {
   checkout='Cart';
   admin ='Admin';
   logOutText="Log Out";
+  isAdmin = false;
   url=LoginUrl;
   isLoggedIn = false;
   idToken='account#id_token=';
@@ -31,6 +32,10 @@ export class NavComponent implements OnInit {
     // console.log(access_token)
     // console.log("are we working")
     return access_token;
+  }
+
+  adminAccess(){
+    // this.isAdmin=false;
   }
 
   logOut(){}

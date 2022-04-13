@@ -96,11 +96,13 @@
           name="btnradio"
           id="btnradio4"
           autocomplete="off"
+          *ngIf="isAdmin"
         />
         <label
           class="btn btn-outline-success"
           routerLink="/admin"
           for="btnradio4"
+          *ngIf="isAdmin"
           >{{ admin }}</label
         >
       </div>
