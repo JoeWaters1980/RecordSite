@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{LoginUrl} from 'src/app/Api/api'
+import{LoginUrl} from 'src/app/Api/api';
 
 @Component({
   selector: 'app-nav',
