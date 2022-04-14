@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import{LoginUrl} from 'src/app/Api/api';
+import{LoginUrl, logOutUrl} from 'src/app/Api/api';
 
 @Component({
   selector: 'app-nav',
@@ -13,6 +13,7 @@ export class NavComponent implements OnInit {
   checkout='Cart';
   admin ='Admin';
   logOutText="Log Out";
+  logOutUrl=logOutUrl;
   isAdmin = false;
   url=LoginUrl;
   isLoggedIn = false;
@@ -38,5 +39,11 @@ export class NavComponent implements OnInit {
     // this.isAdmin=false;
   }
 
-  logOut(){}
+  logOut(){
+    window.open(this.logOutUrl,"_self")
+    var access_token = new URLSearchParams(window.location.hash).get('access_token')
+    // console.log(access_token)
+    // console.log("are we working")
+    return access_token;
+  }
 }
