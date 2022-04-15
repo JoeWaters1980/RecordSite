@@ -1,19 +1,21 @@
  .container{
-    margin: 0%;
+    /* margin: 0%;
     padding: 3%;
-    background-color: #03771a;
+    background-color: #03771a; */
 }
 title,h2{
-    padding: 1%;
-    color: #f0c92e;
+    /* padding: 1%;
+    color: #f0c92e; */
 }
 
 .card-body{
  
-    padding: 1%; 
+    max-width: 100%;
+    height: auto;
+    /* padding: 1%; 
     background-color: #0a0a0a;
     color: #f0c92e;
-    justify-content: center;
+    justify-content: center; */
 
 }
 /*
