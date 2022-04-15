@@ -1,9 +1,17 @@
 body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0;
     background-color:black;
-    color: whitesmoke;
+    color: black;
 } 
+.Background{
+background-image: url("../src/assets/images/Turntable.jpg");
+
+ height: 100%; 
+
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size:cover;
+}
  
 
 
