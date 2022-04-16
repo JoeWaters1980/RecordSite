@@ -36,7 +36,7 @@ export class CheckoutComponent implements OnInit {
     var loginkey = localStorage.getItem('key');
     
     this.isLoggedIn=(loginkey!==null);
-    console.log("are we logged in" + this.isLoggedIn);
+    // console.log("are we logged in" + this.isLoggedIn);
 
    this.cartItems=window.history.state.data?.map((product:Product, index:number)  => 
          {
@@ -58,8 +58,6 @@ export class CheckoutComponent implements OnInit {
 
       console.log("in if for popup")
       this.dialogRef.open(PopUpComponent);
-
-    // this.dialogRef.open(PopUpComponent);
   }
   processOrder() {
 this.checkout.CheckOutItems(this.cartItems).subscribe(()=>

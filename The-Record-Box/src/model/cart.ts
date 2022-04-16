@@ -9,6 +9,7 @@ export class CartItems {
   productId: String;
   cartId:String;
   productImage:string;
+  // userId:string;
   
 
   constructor(id: string, product: Product, qty = 1) {
