@@ -25,7 +25,7 @@
           checked
         />
         <label
-          class="btn btn-outline-success"
+          class="btn btn-outline-warning"
           routerLink="/Home"
           for="btnradio1"
           >{{ home }}</label
@@ -39,7 +39,7 @@
           autocomplete="off"
         />
         <label
-          class="btn btn-outline-success"
+          class="btn btn-outline-warning"
           routerLink="/shop"
           for="btnradio2"
           >{{ shop }}</label
@@ -54,7 +54,7 @@
           *ngIf="!isLoggedIn"
         />
         <label
-          class="btn btn-outline-success"
+          class="btn btn-outline-warning"
           (click)="logIn()"
           for="btnradio3"
           *ngIf="!isLoggedIn"
@@ -70,7 +70,7 @@
           *ngIf="isLoggedIn"
         />
         <label
-          class="btn btn-outline-success"
+          class="btn btn-outline-warning"
           (click)="logOut()"
           for="btnradioLO" *ngIf="isLoggedIn"
           >{{ logOutText }}</label
@@ -84,7 +84,7 @@
           autocomplete="off"
         />
         <label
-          class="btn btn-outline-success"
+          class="btn btn-outline-warning"
           routerLink="/checkout"
           for="btnradio4"
           >{{ checkout }}</label
@@ -99,7 +99,7 @@
           *ngIf="isAdmin"
         />
         <label
-          class="btn btn-outline-success"
+          class="btn btn-outline-warning"
           routerLink="/admin"
           for="btnradio4"
           *ngIf="isAdmin"

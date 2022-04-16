@@ -11,6 +11,8 @@ export class MessengerService {
   removeSubject = new Subject()
   moveSubject = new Subject()
   checkSubject= new Subject()
+  logInSubject = new Subject()
+  
 
   constructor() { }
 
@@ -36,5 +38,12 @@ export class MessengerService {
 
   MoveToCheckOut(products :any) {
    this.moveSubject.next(products) 
+  }
+
+  CheckIfLogin(){
+    return this.logInSubject.asObservable()
+  }
+  logInMessage(loginState:any){
+    this.moveSubject.next(loginState) 
   }
 }
