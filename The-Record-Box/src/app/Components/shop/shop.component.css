@@ -1,11 +1,10 @@
 .container{
- background-color:  #03771a;
+ color: #000;
  padding: 1%;
 }
 h2{
-    color:#f0c92e;
+    color:black;
 }
 .row{
- background-color: #03771a;
  padding: 2%;
 }

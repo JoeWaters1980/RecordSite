@@ -1,15 +1,15 @@
 .card,li{
-    background-color: #f0c92e;
-    border-color: #d30521;
-    color: #d30521;
+    background-color: black;
+    border-color: #f0c92e;
+    color: #f0c92e;
 
 }
 .text,label{
-    color: #d30521;
+    color: #f0c92e;
 }
 .btn-primary{
-    background-color: #f0c92e;
-    border-color: #d30521;
-    color: #d30521;
+    background-color: black;
+    border-color: #f0c92e;
+    color: #f0c92e;
 
 }

@@ -1,42 +1,40 @@
 .card-body,li{
-    background-color: #f0c92e;
-    border-color: #d30521;
+    background-color: black;
+    border-color: #f0c92e;
     margin: 2%;
-    color: #d30521;
+    color: #f0c92e;
   
 
 }
-.text,label{
-   
-}
+
 .btn{
     margin:2%;
-    color: #d30521;
-    border-color: #d30521;
-    background-color: #f0c92e;
+    color: #f0c92e;
+    border-color: #f0c92e;
+    background-color:black;
 
 }
 .alert-info {
-    background-color: #f0c92e;
-    border-color: #d30521;
-    color: #d30521;
+    background-color: black;
+    border-color: #f0c92e;
+    color: #f0c92e;
 }
 .cart-items:active,span{
-    color: #d30521;
+    color: #f0c92e;
 }
 .list-group-item,li,ul{
-    background-color: #f0c92e;
-    color: #d30521;
+    background-color: black;
+    color: #f0c92e;
 }
 .container{
-    background-color: #f0c92e;
+    background-color: black;
     padding:2%;
 
 }
 .text,p{
-    color: #d30521;
+    color: #f0c92e;
 }
 .list-group-item:active{
-    color: #d30521;
-    border-color: #d30521;
+    color: #f0c92e;
+    border-color: #f0c92e;
 }
