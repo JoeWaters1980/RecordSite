@@ -1,33 +1,33 @@
  .container{
-    /* margin: 0%;
+    margin: 0%;
     padding: 3%;
-    background-color: #03771a; */
 }
-title,h2{
-    /* padding: 1%;
-    color: #f0c92e; */
-}
+/* title,h2{
+    padding: 1%;
+    color: #f0c92e;
+} */
 
 .card-body{
  
     max-width: 100%;
     height: auto;
     /* padding: 1%; 
-    background-color: #0a0a0a;
     color: #f0c92e;
+    background-color: #0a0a0a;
     justify-content: center; */
 
 }
-/*
 .card-text,p{
-    color: #f0c92e;
+    
+    color: black;
     
 }
-
+/*
 .bd-placeholder-img{
     padding: 1%;
-    border-color: #f0c92e;
+    border-color: bla;
     border-style: solid;
     max-width: 1200px;
     max-height: 800px;
-}  */
+} 
+*/

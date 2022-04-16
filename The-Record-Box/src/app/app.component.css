@@ -3,3 +3,8 @@
     margin: 0;
 } */
 
+body{
+    font-family: "Lucida Console", "Courier New", monospace;
+    background-color:black;
+    color: black;
+} 
