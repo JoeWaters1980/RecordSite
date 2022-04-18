@@ -89,7 +89,19 @@
           for="btnradio4"
           >{{ checkout }}</label
         >
-
+        <input
+        type="radio"
+        class="btn-check"
+        name="btnradio"
+        id="btnradioAcc"
+        autocomplete="off"
+      />
+      <label
+        class="btn btn-outline-dark"
+        routerLink="/account"
+        for="btnradioAcc" *ngIf="isLoggedIn"
+        >{{ account }}</label
+      >
         <input
           type="radio"
           class="btn-check"

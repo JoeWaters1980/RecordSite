@@ -12,6 +12,7 @@ export class NavComponent implements OnInit {
   shop='Shop';
   login='Login';
   checkout='Cart';
+  account='Account';
   admin ='Admin';
   logOutText="Log Out";
   logOutUrl=logOutUrl;
