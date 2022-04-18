@@ -1,30 +1,30 @@
 .card-body,li{
     background-color: black;
-    border-color: #f0c92e;
+    border-color: whitesmoke;
     margin: 2%;
-    color: #f0c92e;
+    color: whitesmoke;
   
 
 }
 
 .btn{
     margin:2%;
-    color: #f0c92e;
-    border-color: #f0c92e;
+    color: whitesmoke;
+    border-color: whitesmoke;
     background-color:black;
 
 }
 .alert-info {
     background-color: black;
-    border-color: #f0c92e;
-    color: #f0c92e;
+    border-color: whitesmoke;
+    color: whitesmoke;
 }
 .cart-items:active,span{
-    color: #f0c92e;
+    color: whitesmoke;
 }
 .list-group-item,li,ul{
     background-color: black;
-    color: #f0c92e;
+    color: whitesmoke;
 }
 .container{
     background-color: black;
@@ -32,9 +32,9 @@
 
 }
 .text,p{
-    color: #f0c92e;
+    color: whitesmoke;
 }
 .list-group-item:active{
-    color: #f0c92e;
-    border-color: #f0c92e;
+    color: whitesmoke;
+    border-color: whitesmoke;
 }

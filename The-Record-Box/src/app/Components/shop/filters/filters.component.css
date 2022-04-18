@@ -1,15 +1,15 @@
 .card,li{
     background-color: black;
-    border-color: #f0c92e;
-    color: #f0c92e;
+    border-color: whitesmoke;
+    color: whitesmoke;
 
 }
 .text,label{
-    color: #f0c92e;
+    color: whitesmoke;
 }
 .btn-primary{
     background-color: black;
-    border-color: #f0c92e;
-    color: #f0c92e;
+    border-color: whitesmoke;
+    color: whitesmoke;
 
 }

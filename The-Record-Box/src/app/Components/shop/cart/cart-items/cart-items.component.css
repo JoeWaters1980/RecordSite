@@ -1,12 +1,12 @@
 .btn{
-    border-color: #f0c92e;
-    color: #f0c92e;
+    border-color: whitesmoke;
+    color: whitesmoke;
 }
 .cart-items{
 
-    color: #f0c92e;
+    color: whitesmoke;
 }
 .list-group-item,p{
-    color: #f0c92e;
-    border-color: #f0c92e;
+    color: whitesmoke;
+    border-color: whitesmoke;
 }
