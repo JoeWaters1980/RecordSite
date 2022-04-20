@@ -40,7 +40,7 @@ export class CheckoutComponent implements OnInit {
 
    this.cartItems=window.history.state.data?.map((product:Product, index:number, info:string)  => 
          {
-          return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:index+1,productId:product.Id, productImage:product.Image,userId:info+"info"}
+          return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:index+1,productId:product.Id, productImage:product.Image,userId:info="info"}
 
         });
         this.cartItems?.forEach(cartItem => {

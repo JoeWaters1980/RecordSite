@@ -9,10 +9,10 @@ export class CartItems {
   productId: String;
   cartId:String;
   productImage:string;
-  // userId:string;
+  userId:string;
   
 
-  constructor(id: string, product: Product, qty = 1) {
+  constructor(id: string, product: Product, qty = 1, userId:string) {
     this.cartId=id;
      this.productId = product.Id;
     this.productName = product.name;
@@ -21,6 +21,7 @@ export class CartItems {
     this.productPrice = product.price;
     this.qty = qty;
     this.productImage= product.Image;
+    this.userId=userId;
   }
 }
 

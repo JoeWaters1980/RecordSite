@@ -18,7 +18,8 @@ export class Product {
     price:number,
     image:string,
     Quantity:number,
-    productId:string
+    productId:string,
+    uId:string
    
   ) {
      this.Id = Id;
@@ -30,7 +31,7 @@ export class Product {
     this.Image = image;
     this.Quantity= Quantity;
     this.productId= productId;
-    this.userId ="";
+    this.userId =uId;
   }
 }
 
