@@ -8,6 +8,7 @@ export class Product {
   qty: number;
   Quantity: number;
   productId:string;
+  userId: string;
 
   constructor(
      Id: string,
@@ -18,6 +19,7 @@ export class Product {
     image:string,
     Quantity:number,
     productId:string
+   
   ) {
      this.Id = Id;
     this.name = name;
@@ -28,6 +30,7 @@ export class Product {
     this.Image = image;
     this.Quantity= Quantity;
     this.productId= productId;
+    this.userId ="";
   }
 }
 

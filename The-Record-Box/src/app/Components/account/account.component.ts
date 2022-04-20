@@ -19,11 +19,15 @@ export class AccountComponent implements OnInit {
     var decode:any = jwt_decode(access_token?? '');
     console.log(decode);
     this.userName=decode.username;
+    console.log("Email"+decode.Email)
     if (access_token!= undefined && firstLogin){
       this.msg.logInMessage(true);
       window.location.reload();
+
     }
+    
   }
+
   
 }
   
