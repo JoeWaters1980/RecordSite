@@ -10,6 +10,7 @@ import { CheckoutService } from 'src/services/checkout.service';
 import {MatDialog} from '@angular/material/dialog';
 import { PopUpComponent } from '../pop-up/pop-up.component';
 import { OrderPlacedComponent } from '../order-placed/order-placed.component';
+import  jwt_decode  from 'jwt-decode';
 
 @Component({
   selector: 'app-checkout',
@@ -35,12 +36,14 @@ export class CheckoutComponent implements OnInit {
 
     var loginkey = localStorage.getItem('key');
     
+    
+    var decode:any = jwt_decode(loginkey?? '');
     this.isLoggedIn=(loginkey!==null);
     // console.log("are we logged in" + this.isLoggedIn);
 
    this.cartItems=window.history.state.data?.map((product:Product, index:number, info:string)  => 
          {
-          return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:index+1,productId:product.Id, productImage:product.Image,userId:info="info"}
+          return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:index+1,productId:product.Id, productImage:product.Image,productUser:decode.email}
 
         });
         this.cartItems?.forEach(cartItem => {

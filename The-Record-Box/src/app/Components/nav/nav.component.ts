@@ -19,7 +19,7 @@ export class NavComponent implements OnInit {
   isAdmin = false;
   url=LoginUrl;
   isLoggedIn = false;
-  idToken='account#id_token=';
+  idToken='account#openid=';
   constructor(private msg:MessengerService) { }
 
   ngOnInit(): void {
@@ -35,7 +35,6 @@ export class NavComponent implements OnInit {
   logIn(){
     window.open(this.url,"_self")
     var access_token = new URLSearchParams(window.location.hash).get('access_token')
-    // console.log(access_token)
     // console.log("are we working")
     return access_token;
   }
