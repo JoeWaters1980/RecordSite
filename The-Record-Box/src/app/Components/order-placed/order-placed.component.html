@@ -1,4 +1,12 @@
 <div class="Order Placed">
-    <h3>Thanks for your Order</h3>
-    </div>
-    
+  <h3>Thanks for your Order</h3>
+
+  <ul *ngIf="orderedItems.length > 0" class="list-group">
+    <h4
+      class="card-body d-flex justify-content-between align-items-center mb-3"
+    >
+      <span class="text">Yor Order</span>
+    </h4>
+    <li class="list-group-item" *ngFor="let item of orderedItems"></li>
+  </ul>
+</div>

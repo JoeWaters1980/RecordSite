@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{LoginUrl, logOutUrl} from 'src/app/Api/api';
 import { MessengerService } from 'src/services/messenger.service';
+import  jwt_decode  from 'jwt-decode';
 
 @Component({
   selector: 'app-nav',
@@ -26,7 +27,11 @@ export class NavComponent implements OnInit {
     var loginkey = localStorage.getItem('key');
     
     this.isLoggedIn=(loginkey!==null);
- console.log("are we logged in" + this.isLoggedIn);
+  console.log("are we logged in " + this.isLoggedIn);
+  if (this.isLoggedIn === true){
+  //  adminAccess();
+
+  }
  this.msg.CheckIfLogin().subscribe((loginState:any) => {
    this.isLoggedIn= loginState;
  });
@@ -40,7 +45,9 @@ export class NavComponent implements OnInit {
   }
 
   adminAccess(){
-    // this.isAdmin=false;
+    // var decode:any = jwt_decode(access_token?? '');
+    // console.log(decode);
+    // this.email=decode.email;
   }
 
   logOut(){

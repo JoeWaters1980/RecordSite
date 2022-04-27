@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink, Router } from '@angular/router';
-import { Products } from 'src/interface/Products';
+import { Router } from '@angular/router';
 import { Product } from 'src/model/products';
 import { MessengerService } from 'src/services/messenger.service';
 

@@ -7,8 +7,8 @@ client id
 70355986142-pfa827h99uold4mal7i61r8auaf46s42.apps.googleusercontent.com
 
 sec
-
-
+administration
+Test@Pass01
 
 colors{
 
