@@ -19,12 +19,7 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.getProducts();
   }
-  // getProducts(){
-  //   this.services.getProducts().subscribe((data:any) =>{
-  //     console.log(data);
-  //     this.products=data;
-  //   });
-  // }
+
   getProducts() {
     return this.httpClient.get<Products>(dynamoURL).pipe(
       map((data: Products) => {

@@ -5,9 +5,9 @@ import jwt_decode from 'jwt-decode';
 import { cartUrl } from 'src/app/Api/api';
 import { MessengerService } from 'src/services/messenger.service';
 import { map, catchError } from 'rxjs/operators';
-import { cartItems } from 'src/interface/cart';
 import { Products } from '../../../interface/Products';
 import { throwError } from 'rxjs';
+import { CartItems } from 'src/model/cart';
 
 @Component({
   selector: 'app-account',
@@ -16,7 +16,10 @@ import { throwError } from 'rxjs';
 })
 export class AccountComponent implements OnInit {
   email = null;
-  constructor(private msg: MessengerService, httpClient: HttpClient) {}
+  orderItems: CartItems[] = [];
+  constructor(private msg: MessengerService, private httpClient: HttpClient) {
+
+  }
 
   ngOnInit(): void {
     var access_token = new URLSearchParams(
@@ -32,15 +35,22 @@ export class AccountComponent implements OnInit {
       this.msg.logInMessage(true);
       window.location.reload();
     }
+   this.getOrders().subscribe((data:any) =>{
+      // console.log(data);
+      this.orderItems = Object.values(data.body);
+      //  console.log(this.listProducts);
+    });;
   }
-  // getOrders() {
-  //   return this.httpClient.get<cartItems>(cartUrl).pipe(
-  //     map((data: cartItems) => {
-  //       return data;
-  //     }),
-  //     catchError((error) => {
-  //       return throwError('something went wrong');
-  //     })
-  //   );
-  // }
+  getOrders() {
+    return this.httpClient.get<CartItems>(cartUrl).pipe(
+      map((data: CartItems) => {
+        console.log(CartItems);
+        return data;
+        
+      }),
+      catchError((error) => {
+        return throwError('something went wrong');
+      })
+    );
+  }
 }

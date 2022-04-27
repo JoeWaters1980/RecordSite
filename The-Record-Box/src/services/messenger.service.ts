@@ -12,7 +12,7 @@ export class MessengerService {
   moveSubject = new Subject()
   checkSubject= new Subject()
   logInSubject = new Subject()
-  
+
 
   constructor() { }
 
@@ -46,4 +46,5 @@ export class MessengerService {
   logInMessage(loginState:any){
     this.moveSubject.next(loginState) 
   }
+
 }

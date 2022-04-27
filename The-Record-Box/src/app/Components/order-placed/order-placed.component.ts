@@ -16,7 +16,7 @@ export class OrderPlacedComponent implements OnInit {
   cartTotal = 0;
   constructor(private httpClient: HttpClient) { }
   ngOnInit() {
-    this.getOrders();
+    // this.getOrders();
   }
   getOrders(){
     return this.httpClient.get<cartItems>(cartUrl).pipe(

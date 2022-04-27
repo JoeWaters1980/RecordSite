@@ -1,20 +1,26 @@
-   
 <div class="container">
   <h2>Title</h2>
   <br />
 
   <div class="row">
-    <div class="col-md-2" style="padding-bottom: 2%">
-   </div>
+    <div class="col-md-2" style="padding-bottom: 2%"></div>
 
     <div class="col-md-8">
-      <div class=" card-body">
-      <p> thanks for loggin {{this.email}} </p>
+      <div class="card-body">
+        <p>thanks for loggin {{ this.email }}</p>
+      </div>
+      <div class ="card-body">
+        <p>Previous orders</p>
+      <div *ngFor="let p of orderItems" class="col">
+          <p class="card-text">product Name: {{ p.productName }}</p>
+          <p class="card-text">product Category: {{ p.productCategory }}</p>
+          <p class="card-text">product Description: {{ p.productDescription }}</p>
+          <p class="card-text">product Price: {{ p.productPrice}}</p>
+          <p class="card-text">Quantity: {{ p.qty }}</p>
+          <p class="card-text">User: {{ p.productUser }}</p>
+          <br>
     </div>
-    </div>
-
-    <div class="col shadow-md">
-
-    </div>
-  </div>
+</div>
+</div>
+</div>
 </div>
