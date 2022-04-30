@@ -1,56 +1,61 @@
-/* .col{
-    align-content: center;
-    padding: 2em;
+.col{
+    align-content: center; 
     margin: 2%;
-    background-color: #03771a;
+    background-color: black;
 }
 
 .card{
-    background-color: #0a0a0a;
-    border-color: #f0c92e;
+    background-color: black;
+    border-color: white;
 }
-.card,h3{
+.card{
+    border-color: white;
     text-align:  center;
-    color: #f0c92e;
+    color: white;
+}
+.heading{
+    /* border-color: white;  */
+    text-align:  center;
+    margin-top: 1.5em;
+    margin-bottom: 0;
+    color: white;
 }
 .card-body,p{
-    color: #f0c92e;}
+    color: white;}
     
 .card-text{
-    color: #f0c92e;
+    color: white;
 }
 .btn{
     margin: 1%;
     background-color: #0a0a0a;
-    color:#f0c92e;
-    border-color: #f0c92e;
+    color:white;
+    border-color:white;
 }
 .alert{
-    color: #f0c92e;
-    background-color: #03771a;
+    color: white;
+    background-color:black;
 }
 .container{
-    align-content: left;
+    /* align-content: left; */
     padding: 2em;
     margin: 2%;
-    background-color: #03771a;
+    background-color:black;
 }
-.form-group{
-    padding: 2em;
-    margin: 2%;
-    align-items: flex-start;
-}
-.container-form{
-    padding: 2%;
-    margin: 3%;
-    background-color: #03771a;
-}
-.row-md-2{
-    padding: 1%;
+.list-group-horizontal{
     margin: 1%;
-    text-align: left;
+    align-items: flex-start; 
+     /* padding: 1em; */
+}
+
+.row-md-2{
+    padding: 1em;
 }
 .image{
     max-width: 100px;
     max-height: 100px;
-} */
+}
+.allProducts{
+    margin: 1em;
+    padding: 1em;
+}

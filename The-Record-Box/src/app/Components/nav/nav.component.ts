@@ -29,7 +29,7 @@ export class NavComponent implements OnInit {
     this.isLoggedIn=(loginkey!==null);
   console.log("are we logged in " + this.isLoggedIn);
   if (this.isLoggedIn === true){
-  //  adminAccess();
+  this.adminAccess();
 
   }
  this.msg.CheckIfLogin().subscribe((loginState:any) => {
@@ -45,8 +45,10 @@ export class NavComponent implements OnInit {
   }
 
   adminAccess(){
-    // var decode:any = jwt_decode(access_token?? '');
-    // console.log(decode);
+    this.isAdmin = true;
+    var access_token = new URLSearchParams(window.location.hash).get('access_token')
+    var decode:any = jwt_decode(access_token?? '');
+    console.log(decode);
     // this.email=decode.email;
   }
 

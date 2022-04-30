@@ -45,9 +45,9 @@ export class AdminComponent implements OnInit {
       productId:new FormControl("productId"),
       Image:new FormControl("Image"),
       price:new FormControl(0.00),
-      description:new FormControl(''),
+      description:new FormControl('description'),
       Quantity:new FormControl(0),
-      category:new FormControl('')
+      category:new FormControl('category')
     })
 
   }

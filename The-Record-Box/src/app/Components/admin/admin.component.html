@@ -1,42 +1,74 @@
 <div class="container">
   <div class="card shadow-sm">
+    <div class="heading">
     <h3>Add A New Product</h3>
-    <div class="row">
+  </div>
+    <div class="col">
       <form [formGroup]="newItem" (ngSubmit)="onSubmit(newItem.value)">
-        <span> 
-          <div class="container-form ">
+        <span>
+          <div class="container-form">
             <div class="form-group">
-              <label class="row-md-2 form-label" >ProductId</label>
-              <input for="productId" formControlName="productId" type="text" class="row-md-2-form-control" />
+              <ul class="list-group-horizontal">
+                <div class="col">
+                  <label class="row-md-2 form-label">ProductId</label>
+                  <input
+                    for="productId"
+                    formControlName="productId"
+                    type="text"
+                    class="row-md-2-form-control"
+                  />
+                  <label class="row-md-2 form-label">Name</label>
+                  <input
+                    formControlName="name"
+                    type="text"
+                    class="row-md-2-form-control"
+                  />
+                  <label class="row-md-2 form-label">Image</label>
+                  <input
+                    for="Image"
+                    formControlName="Image"
+                    type="text"
+                    class="row-md-2-form-control"
+                  />
+                </div>
+                <div class="col">
+                  <label class="row-md-2 form-label">price</label>
+                  <input
+                    for="price"
+                    formControlName="price"
+                    type="text"
+                    class="row-md-2-form-control"
+                  />
+                  <label class="row-md-2 form-label">description</label>
+                  <input
+                    for="description"
+                    formControlName="description"
+                    type="text"
+                    class="row-md-2-form-control"
+                  />
+                  <label class="row-md-2 form-label">Quantity</label>
+                  <input
+                    for="Quantity"
+                    formControlName="Quantity"
+                    type="text"
+                    class="row-md-2-form"
+                  />
+                  <div class="col">
+                    <label class="row-md-2 form-label">category</label>
+                    <input
+                      for="category"
+                      formControlName="category"
+                      type="text"
+                      class="row-md-2-form"
+                    />
+                  </div>
+                </div>
+              </ul>
             </div>
-            <div class="form-group">
-              <label class="row-md-2 form-label" >Name</label>
-              <input formControlName="name" type="text" class="row-md-2-form-control" />
-            </div>
-            <div class="form-group">
-              <label class="row-md-2 form-label" >Image</label>
-              <input for="Image" formControlName="Image" type="text" class="row-md-2-form-control" />
-            </div>
-            <div class="form-group">
-              <label class="row-md-2 form-label" >price</label>
-              <input for="price" formControlName="price" type="text" class="row-md-2-form-control" />
-            </div>
-            <div class="form-group">
-              <label class="row-md-2 form-label">description</label>
-              <input for="description" formControlName="description" type="text" quantityclass="row-md-2-form" />
-            </div>
-            <div class="form-group">
-              <label class="row-md-2 form-label">quantity</label>
-              <input for="Quantity" formControlName="Quantity"type="text" class="row-md-2-form" />
-            </div>
-            <div class="form-group">
-              <label class="row-md-2 form-label" >category</label>
-              <input for="category" formControlName="category"type="text" class="row-md-2-form" />
-            </div>
-            <button  class="btn btn col-md-2" type="submit">
+            <button class="btn btn col-md-2" type="submit">
               Add New Product
             </button>
-          </div> 
+          </div>
         </span>
       </form>
     </div>
@@ -44,16 +76,19 @@
 </div>
 <div class="container">
   <div class="card shadow-sm">
-    <h3>All Products</h3>
+    <div class="heading">
+      <h3>All Products</h3>
+    </div>
     <div class="row">
       <div
         class="col-md-4"
         *ngFor="let product of listProducts"
-        style="padding-bottom: 2%">
+        style="padding-bottom: 2% "
+      >
         <div class="card-text">
           <div class="form-group">
-            <ul>
-              <p>Id: {{ product.productId}}</p>
+            <ul class="allProducts">
+              <p>Id: {{ product.productId }}</p>
               <p>Name: {{ product.name }}</p>
               <img class="image" src="{{ product.Image }}" />
               <p>category: {{ product.category }}</p>
