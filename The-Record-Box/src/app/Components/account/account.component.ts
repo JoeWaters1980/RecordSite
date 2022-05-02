@@ -17,36 +17,40 @@ import { CartItems } from 'src/model/cart';
 export class AccountComponent implements OnInit {
   email = null;
   orderItems: CartItems[] = [];
-  constructor(private msg: MessengerService, private httpClient: HttpClient) {
-
-  }
+  constructor(private msg: MessengerService, private httpClient: HttpClient) {}
 
   ngOnInit(): void {
-    var access_token = new URLSearchParams(
-      window.location.hash.replace('#', '?')
-    ).get('id_token');
+    var access_token;
+    var decode:any;
     var firstLogin = localStorage.getItem('key') === null;
-    localStorage.setItem('key', access_token ?? '');
+    if (window.location.hash) {
+      access_token = new URLSearchParams(
+        window.location.hash.replace('#', '?')
+      ).get('id_token');
 
-    var decode: any = jwt_decode(access_token ?? '');
+      localStorage.setItem('key', access_token ?? '');
+    }
+    else{
+      access_token=localStorage.getItem('key');
+    }
+    decode =access_token? jwt_decode(access_token):'';
     console.log(decode);
     this.email = decode.email;
     if (access_token != undefined && firstLogin) {
       this.msg.logInMessage(true);
       window.location.reload();
     }
-   this.getOrders().subscribe((data:any) =>{
+    this.getOrders().subscribe((data: any) => {
       // console.log(data);
       this.orderItems = Object.values(data.body);
       //  console.log(this.listProducts);
-    });;
+    });
   }
   getOrders() {
     return this.httpClient.get<CartItems>(cartUrl).pipe(
       map((data: CartItems) => {
         console.log(CartItems);
         return data;
-        
       }),
       catchError((error) => {
         return throwError('something went wrong');

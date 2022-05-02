@@ -1,28 +1,29 @@
-/* .card{
-    background-color: #0a0a0a;
-    border-color: #f0c92e;
+.card{
+    background-color: black;
+    border-color: white;
 }
 .card,h6{
+    margin-top: 2%;
     text-align:  center;
-    color: #f0c92e;
+    color: white;
 }
 .card-body,p{
-    color: #f0c92e;}
+    color: white;}
     
 .card-text{
-    color: #f0c92e;
+    color: white;
 }
 .btn{
-    background-color: #0a0a0a;
-    color:#f0c92e;
-    border-color: #f0c92e;
+    background-color: black;
+    color:white;
+    border-color: white;
 }
 .text{
-    color: #f0c92e;
+    color: white;
 }
 .container{
     align-content: center;
     padding: 2em;
     margin: 2%;
-    background-color: #03771a;
-} */
+    background-color: black;
+}

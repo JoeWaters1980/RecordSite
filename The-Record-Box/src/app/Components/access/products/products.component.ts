@@ -14,7 +14,7 @@ export class ProductsComponent implements OnInit {
   @Input()
   products: Products[] = [];
   title = 'Shop';
-  // constructor(public httpClient: HttpClient, private services: ServicesService) {}
+
   constructor(private httpClient: HttpClient) {}
   ngOnInit() {
     this.getProducts();

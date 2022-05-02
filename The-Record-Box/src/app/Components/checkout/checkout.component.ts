@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
+import { EMPTY, Observable, throwError } from 'rxjs';
 import { CartItems } from 'src/model/cart';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { MessengerService } from 'src/services/messenger.service';
@@ -28,19 +28,16 @@ export class CheckoutComponent implements OnInit {
   //logic for checking logged in use the *ngIf like nav login.
 
   constructor(private http: HttpClient, private msg: MessengerService, private _router :Router, private checkout:CheckoutService, private dialogRef:MatDialog) {
-    //  console.log(this.cartUrl);
-    
+   
   }
 
   ngOnInit(){
 
     var loginkey = localStorage.getItem('key');
+    var decode:any =loginkey? jwt_decode(loginkey):'';
+    this.isLoggedIn=(loginkey!==null && loginkey!=='');
+     console.log("are we logged in" + this.isLoggedIn);
     
-    
-    var decode:any = jwt_decode(loginkey?? '');
-    this.isLoggedIn=(loginkey!==null);
-    // console.log("are we logged in" + this.isLoggedIn);
-
    this.cartItems=window.history.state.data?.map((product:Product, index:number, info:string)  => 
          {
           return {productDescription:product.description,productCategory:product.category,productName:product.name,productPrice:product.price,qty:product.qty,cartId:index+1,productId:product.Id, productImage:product.Image,productUser:decode.email}
@@ -67,9 +64,11 @@ this.checkout.CheckOutItems(this.cartItems).subscribe(()=>
 {
   this.dialogRef.open(OrderPlacedComponent);
  
-   console.log(this.cartItems)
+   console.log(this.cartItems);
+
 });
   }
 
   clearCartItems() {}
+
 }

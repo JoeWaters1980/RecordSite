@@ -25,31 +25,32 @@ export class NavComponent implements OnInit {
 
   ngOnInit(): void {
     var loginkey = localStorage.getItem('key');
+    var LoggedIn = sessionStorage.setItem('LoggedIn',JSON.stringify(loginkey));
     
     this.isLoggedIn=(loginkey!==null);
   console.log("are we logged in " + this.isLoggedIn);
   if (this.isLoggedIn === true){
+    sessionStorage.getItem('LoggedIn');
   this.adminAccess();
 
   }
  this.msg.CheckIfLogin().subscribe((loginState:any) => {
    this.isLoggedIn= loginState;
+   sessionStorage.setItem('LoggedIn', "true");
  });
 
   }
   logIn(){
     window.open(this.url,"_self")
-    var access_token = new URLSearchParams(window.location.hash).get('access_token')
-    // console.log("are we working")
+    var access_token = new URLSearchParams(window.location.hash).get('access_token');
     return access_token;
   }
 
   adminAccess(){
     this.isAdmin = true;
-    var access_token = new URLSearchParams(window.location.hash).get('access_token')
+    var access_token = localStorage.getItem('key')
     var decode:any = jwt_decode(access_token?? '');
-    console.log(decode);
-    // this.email=decode.email;
+    console.log("key "+ decode);
   }
 
   logOut(){

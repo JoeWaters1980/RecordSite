@@ -7,6 +7,12 @@
     >
       <span class="text">Yor Order</span>
     </h4>
-    <li class="list-group-item" *ngFor="let item of orderedItems"></li>
+<li>{{orderedItems}}</li>
+    <li>{{userAddress.addressLine1}}</li>
+    <li>{{userAddress.addressLine2}}</li>
+    <li>{{userAddress.city}}</li>
+    <li>{{userAddress.postcode}}</li>
+    <li>{{userAddress.country}}</li>
   </ul>
+  <button class="submit">complete purchase</button>
 </div>
