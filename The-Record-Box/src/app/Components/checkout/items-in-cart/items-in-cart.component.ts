@@ -7,23 +7,20 @@ import { MessengerService } from 'src/services/messenger.service';
 @Component({
   selector: 'app-items-in-cart',
   templateUrl: './items-in-cart.component.html',
-  styleUrls: ['./items-in-cart.component.css']
+  styleUrls: ['./items-in-cart.component.css'],
 })
 export class ItemsInCartComponent implements OnInit {
-
-  @Input() itemsInCart!:CartItems;
+  @Input() itemsInCart!: CartItems;
   cartTotal = 0;
-  constructor(private msg: MessengerService) { }
+  constructor(private msg: MessengerService) {}
 
   ngOnInit(): void {
-    console.log(this.itemsInCart)
-    this.cartTotal += (this.itemsInCart.productPrice* this.itemsInCart.qty);
+    // console.log(this.itemsInCart)
+    this.cartTotal += this.itemsInCart.productPrice * this.itemsInCart.qty;
   }
-  AddToCartHandle(){
+  AddToCartHandle() {
     this.msg.sendMessage(this.itemsInCart);
-    
-    // this.cartTotal += productPrice;
 
-    
+    // this.cartTotal += productPrice;
   }
 }

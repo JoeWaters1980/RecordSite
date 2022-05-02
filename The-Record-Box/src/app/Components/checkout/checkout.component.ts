@@ -36,7 +36,7 @@ export class CheckoutComponent implements OnInit {
     var loginkey = localStorage.getItem('key');
     var decode:any =loginkey? jwt_decode(loginkey):'';
     this.isLoggedIn=(loginkey!==null && loginkey!=='');
-     console.log("are we logged in" + this.isLoggedIn);
+    //  console.log("are we logged in" + this.isLoggedIn);
     
    this.cartItems=window.history.state.data?.map((product:Product, index:number, info:string)  => 
          {
@@ -62,9 +62,10 @@ export class CheckoutComponent implements OnInit {
   processOrder() {
 this.checkout.CheckOutItems(this.cartItems).subscribe(()=>
 {
+
   this.dialogRef.open(OrderPlacedComponent);
  
-   console.log(this.cartItems);
+  //  console.log(this.cartItems);
 
 });
   }
