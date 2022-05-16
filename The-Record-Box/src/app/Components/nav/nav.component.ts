@@ -50,7 +50,7 @@ export class NavComponent implements OnInit {
     this.isAdmin = true;
     var access_token = localStorage.getItem('key');
     var decode: any = jwt_decode(access_token ?? '');
-    // console.log("key "+ decode);
+     console.log("key "+ decode);
   }
 
   logOut() {
