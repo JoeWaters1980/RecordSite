@@ -4,6 +4,8 @@ WORKDIR /The-Record-box/src
 
 ENV PORT 4200
 
+EXPOSE 8888
+
 COPY package.json /The-Record-box/package.json
 
 RUN npm install
