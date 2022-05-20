@@ -10,7 +10,7 @@ import { cartItems } from 'src/interface/cart';
 })
 export class ServicesService {
   productURL = environment.dynamoURL;
-  cartURL = environment.dynamoURL;
+  cartURL = environment.cartUrl;
 
   constructor(private httpClient:HttpClient) { }
   // getProducts(){
