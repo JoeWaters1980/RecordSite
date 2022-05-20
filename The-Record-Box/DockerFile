@@ -1,15 +1,8 @@
-FROM  node:16.13.1
-
+# syntax=docker/dockerfile:1
+FROM node:12-alpine
+RUN apk add --no-cache python2 g++ make
 WORKDIR /The-Record-box/src
-
-ENV PORT 4200
-
-EXPOSE 8888
-
-COPY package.json /The-Record-box/package.json
-
-RUN npm install
-
-COPY . /The-Record-box/src/app
-
-CMD [ "node", "src/index.html" ]
+COPY . .
+RUN yarn install --production
+CMD ["node", "src/index.js"]
+EXPOSE 3000
