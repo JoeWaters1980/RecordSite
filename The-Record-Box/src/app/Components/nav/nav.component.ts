@@ -28,7 +28,7 @@ export class NavComponent implements OnInit {
     var LoggedIn = sessionStorage.setItem('LoggedIn', JSON.stringify(loginkey));
 
     this.isLoggedIn = loginkey !== null;
-    // console.log("are we logged in " + this.isLoggedIn);
+     console.log("are we logged in " + this.isLoggedIn);
     if (this.isLoggedIn === true) {
       sessionStorage.getItem('LoggedIn');
       this.adminAccess();
@@ -59,8 +59,8 @@ export class NavComponent implements OnInit {
     var access_token = new URLSearchParams(window.location.hash).get(
       'access_token'
     );
-    // console.log(access_token)
-    // console.log("are we working")
+    console.log(access_token)
+    console.log("are we working")
     return access_token;
   }
 }
