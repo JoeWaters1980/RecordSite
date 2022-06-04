@@ -35,6 +35,7 @@ export class OrderPlacedComponent implements OnInit {
   getOrders() {
     return this.httpClient.get<cartItems>(cartUrl).pipe(
       map((data: cartItems) => {
+        console.log(data);
         return data;
       }),
       catchError((error) => {

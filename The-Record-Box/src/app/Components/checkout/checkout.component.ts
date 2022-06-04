@@ -65,7 +65,7 @@ this.checkout.CheckOutItems(this.cartItems).subscribe(()=>
 
   this.dialogRef.open(OrderPlacedComponent);
  
-  //  console.log(this.cartItems);
+   console.log(this.cartItems);
 
 });
   }

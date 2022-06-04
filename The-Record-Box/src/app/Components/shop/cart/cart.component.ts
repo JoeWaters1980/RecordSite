@@ -18,7 +18,7 @@ export class CartComponent implements OnInit {
 
    
     this.msg.getMessage().subscribe((product: any) => {
-      // console.log(product);
+       console.log(product);
        this.cartTotal += product.price;
 
       const existingItems= this.cartItems.filter((item)=>

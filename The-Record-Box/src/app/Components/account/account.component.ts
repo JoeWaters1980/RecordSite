@@ -27,29 +27,30 @@ export class AccountComponent implements OnInit {
       access_token = new URLSearchParams(
         window.location.hash.replace('#', '?')
       ).get('id_token');
-
+      // console.log(access_token);
       localStorage.setItem('key', access_token ?? '');
     }
     else{
       access_token=localStorage.getItem('key');
     }
     decode =access_token? jwt_decode(access_token):'';
-    console.log(decode);
+    // console.log(decode);
     this.email = decode.email;
     if (access_token != undefined && firstLogin) {
       this.msg.logInMessage(true);
       window.location.reload();
     }
     this.getOrders().subscribe((data: any) => {
-      // console.log(data);
+       
       this.orderItems = Object.values(data.body);
-      //  console.log(this.listProducts);
+      // console.log(data.body);
+        // console.log(this.listProducts);
     });
   }
   getOrders() {
     return this.httpClient.get<CartItems>(cartUrl).pipe(
       map((data: CartItems) => {
-        console.log(CartItems);
+        //  console.log(CartItems);
         return data;
       }),
       catchError((error) => {

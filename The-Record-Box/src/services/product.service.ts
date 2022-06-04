@@ -6,7 +6,6 @@ import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { Products } from 'src/interface/Products';
 
-
 @Injectable({
   providedIn: 'root',
 })
@@ -27,14 +26,14 @@ export class ProductService {
     );
   }
 
-  addNewProduct(items:Product){
+  addNewProduct(items: Product) {
     const httpOptions = {
       headers: new HttpHeaders({
-        'Content-Type':  'application/json',
-        Authorization: `bearer ${localStorage.getItem('key')}`
-      })
-    }
-    return this.httpClient.post<Product>(dynamoURL,items, httpOptions).pipe(
+        'Content-Type': 'application/json',
+        Authorization: `bearer ${localStorage.getItem('key')}`,
+      }),
+    };
+    return this.httpClient.post<Product>(dynamoURL, items, httpOptions).pipe(
       map((data: Product) => {
         return data;
       }),

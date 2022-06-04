@@ -23,7 +23,7 @@ export class cartItems implements ICart {
         this.category = category;
         this.price = price;
         this.qty=qty;
-        this.productUser;
+        this.productUser=userId;
         
     }
 }
